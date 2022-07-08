@@ -30,6 +30,7 @@ function homepage() {
             document.getElementById("optionHide").style.display = "flex";
             document.getElementById("footer").style.display = "flex";
             document.getElementById("up").style.display = "flex";
+            sessionStorage.setItem('homepageSession', 'homepageSession');
         }, 500);
     }, 1000);
 
@@ -67,6 +68,7 @@ function homepagePhone() {
             document.getElementById("optionHide").style.display = "flex";
             document.getElementById("footer").style.display = "flex";
             document.getElementById("up").style.display = "flex";
+            sessionStorage.setItem('homepageSession', 'homepageSession');
         }, 500);
     }, 1000);
 

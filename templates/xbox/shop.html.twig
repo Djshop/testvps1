@@ -55,7 +55,7 @@
 				<div class="buttonsHomePage"></div>
 				<i class="fa-brands fa-xbox xboxHomePage"></i>
 			</div>
-			<div onclick="homepageBoth()" id="xbxLogoAnim" class="xbxLogoAnim">
+			<div onclick="homepage()" id="xbxLogoAnim" class="xbxLogoAnim">
 				<div id="fontxbxLogo" class="fontxbxLogo"></div>
 				<img id="xbxLeft" class="xbxPart" src="{{ asset('image/xboxLeft.png')}}" alt="">
 				<img id="xbxTop" class="xbxPart" src="{{ asset('image/xboxTop.png')}}" alt="">
@@ -63,7 +63,7 @@
 				<img id="xbxBottom" class="xbxPart" src="{{ asset('image/xboxBottom.png')}}" alt="">
 			</div>
 		
-			<div onclick="homepageBoth()" id="xbxLogoAnimPhone" class="xbxLogoAnimPhone">
+			<div onclick="homepagePhone()" id="xbxLogoAnimPhone" class="xbxLogoAnimPhone">
 				<div id="fontxbxLogoPhone" class="fontxbxLogoPhone"></div>
 				<img id="xbxLeftPhone" class="xbxPartPhone" src="{{ asset('image/xboxLeft.png')}}" alt="">
 				<img id="xbxTopPhone" class="xbxPartPhone" src="{{ asset('image/xboxTop.png')}}" alt="">
@@ -452,19 +452,6 @@
       			
     		}
 
-
-		{# Creation de la session si le bouton est cliquez #}
-			function homepageSession() {
-			 sessionStorage.setItem('homepageSession', 'homepageSession');
-
-			}
-			function homepageBoth() {
-				homepagePhone();
-				setTimeout(function () {
-				homepageSession();
-				   }, 6000);
-
-			}
 			</script>
 
 

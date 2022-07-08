@@ -16,37 +16,7 @@
 		}
 	</style>
 
-	{# Condition pour afficher la page home #}
-		<script>
-		 {# Si on trouve en session le mot de passe reclamer on peut acceder au site #}
-			var sessionVerifyHomepage = sessionStorage.getItem('homepageSession');
-			if(sessionVerifyHomepage){
-			document.getElementById("homePageHide").style.display = "none";
-
-		// Sinon on tombe sur le formulaire reclamant le mdp et depuis n'importe quel page  et on cache le contenu du body
-			}else{
-				document.getElementById("optionHide").style.display = "none";
-				document.getElementById("containerShopHide").style.display = "none";
-				document.getElementById("up").style.display = "none";
-				document.getElementById("footer").style.display = "none";
-		
-      			
-    		}
-
-
-		{# Creation de la session si le bouton est cliquez #}
-			function homepageSession() {
-			 sessionStorage.setItem('homepageSession', 'homepageSession');
-
-			}
-			function homepageBoth() {
-				homepagePhone();
-				setTimeout(function () {
-				homepageSession();
-				   }, 6000);
-
-			}
-			</script>
+	
 
 
 
@@ -465,7 +435,37 @@
 		</div>
 	</div>
 
-	
+	{# Condition pour afficher la page home #}
+		<script>
+		 {# Si on trouve en session le mot de passe reclamer on peut acceder au site #}
+			var sessionVerifyHomepage = sessionStorage.getItem('homepageSession');
+			if(sessionVerifyHomepage){
+			document.getElementById("homePageHide").style.display = "none";
+
+		// Sinon on tombe sur le formulaire reclamant le mdp et depuis n'importe quel page  et on cache le contenu du body
+			}else{
+				document.getElementById("optionHide").style.display = "none";
+				document.getElementById("containerShopHide").style.display = "none";
+				document.getElementById("up").style.display = "none";
+				document.getElementById("footer").style.display = "none";
+		
+      			
+    		}
+
+
+		{# Creation de la session si le bouton est cliquez #}
+			function homepageSession() {
+			 sessionStorage.setItem('homepageSession', 'homepageSession');
+
+			}
+			function homepageBoth() {
+				homepagePhone();
+				setTimeout(function () {
+				homepageSession();
+				   }, 6000);
+
+			}
+			</script>
 
 
 {% endblock %}

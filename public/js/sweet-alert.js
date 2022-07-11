@@ -9,7 +9,7 @@ function sweetAlertConnected() {
       button: "Connexion",
     })
     .then((redirect) => {
-          window.location = "dj-shop-31.fr/login";
+          window.location = "/login";
     });
   
 }

@@ -8135,14 +8135,14 @@ select option:hover {
     }
 
     .cartEmpty {
-        font-size: 50px;
-        top: 1%;
+        font-size: 70px;
+        top: 30px;
         right: 50% !important;
     }
 
     .cart {
-        font-size: 50px;
-        top: 1%;
+        font-size: 70px;
+        top: 30px;
         right: 50% !important;
     }
 
@@ -8154,11 +8154,11 @@ select option:hover {
     }
 
     .navbar a {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .burger {
-        font-size: 50px;
+        font-size: 80px;
     }
 
     .optionMenu {
@@ -8376,7 +8376,7 @@ select option:hover {
     }
 
     #verified a {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     footer .logo {
@@ -9592,7 +9592,7 @@ select option:hover {
     /* NavLogo */
 
     .navLogo {
-        width: 100px;
+        width: 180px;
     }
 
     /* Fin NavLogo */

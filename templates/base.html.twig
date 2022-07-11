@@ -323,6 +323,14 @@
 		  </div>
 
        <script>
+	{# On active le js si l'on appui sur la touche ENTER #}
+	var verifyEnter = document.getElementById("verifyInput");
+	verifyEnter.addEventListener("keydown", function (e) {
+		if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+			getVal();
+		}
+	});
+
     {# Si on trouve en session le mot de passe reclamer on peut acceder au site #}
     var sessionVerify = sessionStorage.getItem('verify');
     if(sessionVerify){

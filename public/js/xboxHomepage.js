@@ -76,6 +76,6 @@ function homepagePhone() {
 }
 
 function openXbox(id) {
-z ="/xbox".id ;
-window.location = z;
+    console.log(id);
+
 }

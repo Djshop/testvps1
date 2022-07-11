@@ -13,7 +13,7 @@
    <h1 class="h1Add">Ajout d'une nouvelle console</h1>
          {% for level, messages in app.flashes %}
       {% for message in messages %}
-      <div id="errorsAddXbox" class="alert alert-{{ level }} mt-5 mb-5">
+      <div  class="alert alert-{{ level }} mt-5 mb-5 errorsAdd">
          {{ message|raw }}
       </div>
       {% endfor %}

@@ -2113,10 +2113,9 @@ input {
     font-size: 30px;
 }
 
-#errorsAddXbox {
-    position: absolute;
-    top: 0;
-    left: 1%;
+.errorsAdd {
+margin: 0 auto;
+width: 50%;
 }
 
 /*  */

@@ -74,3 +74,8 @@ function homepagePhone() {
 
 
 }
+
+function openXbox(id) {
+
+window.location = "/xbox".id;
+}

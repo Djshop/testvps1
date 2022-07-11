@@ -1334,6 +1334,7 @@ footer .legal {
     animation-duration: 40s;
     animation-iteration-count: infinite;
 }
+
 #manetteOneSlide {
     width: 100px;
     position: absolute;
@@ -1343,6 +1344,7 @@ footer .legal {
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
+
 #manetteTwoSlide {
     width: 100px;
     position: absolute;
@@ -3008,15 +3010,16 @@ input {
 }
 
 /* Verify */
-.pageVerify{
+.pageVerify {
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #202020), var(--cover);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
-#pageVerify{
-display: none;
+
+#pageVerify {
+    display: none;
 }
 
 .containerVerify {
@@ -3034,16 +3037,19 @@ display: none;
     margin-top: 100px;
     margin-left: 10%;
 }
+
 .leftVerify img {
-  width: 75%;
+    width: 75%;
 }
-.leftVerify form{
+
+.leftVerify form {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .leftVerify form input {
     border-radius: 25px;
     background-color: #205375;
@@ -3080,7 +3086,7 @@ display: none;
     padding: 7px 15px 7px 15px;
     border-radius: 3px;
     border: 1px solid #205375;
-  
+
     color: #efefef;
     margin-right: 5px;
     margin-left: 5px;
@@ -3088,10 +3094,12 @@ display: none;
     box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
 
 }
+
 #errorsVerify {
     margin-top: 20px;
     display: none;
 }
+
 #succesVerify {
     margin-top: 20px;
     display: none;
@@ -3133,6 +3141,7 @@ display: none;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .cardXboxNew .top-card .picture img {
@@ -3340,6 +3349,11 @@ display: none;
     font-size: 20px;
     margin: 0 !important;
     padding: 0 !important;
+    cursor: pointer;
+}
+
+.bottom-card .deleteFromCart .titleAdded .titleP:hover {
+    color: #f66b0e;
 }
 
 .bottom-card .deleteFromCart .titleAdded .cartP {
@@ -3367,6 +3381,11 @@ display: none;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.cardXboxNew .top-card .info .textInfo .titleInfo:hover {
+    color: #f66b0e;
 }
 
 .cardXboxNew .top-card .info .textInfo .descriptionInfo {
@@ -6521,7 +6540,7 @@ select option:hover {
 
 
 /*  Page 404  --------------------------------------------------------------------------------------------------------------------*/
-.container404{
+.container404 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6543,9 +6562,11 @@ select option:hover {
 .container404 h1 {
     color: #205375;
 }
+
 .container404 h4 {
     color: #205375;
 }
+
 .container404 a {
     color: #f66B0E;
 }
@@ -6576,12 +6597,12 @@ select option:hover {
     }
 
 
-  
+
     100% {
         top: 80%;
         left: 120%;
         transform: rotate(480deg);
-   
+
     }
 
 }
@@ -6598,10 +6619,11 @@ select option:hover {
         top: 90%;
         right: 110%;
         transform: rotate(720deg);
-   
+
     }
 
 }
+
 @keyframes manetteOne {
     0% {
         top: 0;
@@ -6614,59 +6636,59 @@ select option:hover {
         top: 100%;
         left: 50%;
         transform: rotate(360deg);
-   
+
     }
- 
+
     20% {
         top: 50%;
         left: 100%;
         transform: rotate(720deg);
-        
+
     }
-    
+
 
     30% {
         top: 0;
         left: 50%;
         transform: rotate(1080deg);
-       
+
     }
-    
+
 
     40% {
         top: 50%;
         left: 0;
         transform: rotate(1440deg);
     }
-   
+
 
     50% {
         top: 100%;
         left: 30%;
         transform: rotate(1800deg);
     }
-     
+
 
     60% {
         top: 0;
         left: 80%;
         transform: rotate(2160deg);
     }
-  
+
 
     70% {
         top: 20%;
         left: 100%;
         transform: rotate(2520deg);
     }
-    
+
 
     80% {
         top: 60%;
         left: 0;
         transform: rotate(2880deg);
     }
-     
+
 
     90% {
         top: 100%;
@@ -6678,7 +6700,7 @@ select option:hover {
         top: 0;
         left: 0;
         transform: rotate(3600deg);
-    } 
+    }
 
 
 }
@@ -7545,6 +7567,7 @@ select option:hover {
     .leftVerify {
         margin-left: 0%;
     }
+
     /* ------------------- Fin Verify  ------------------- */
 
 
@@ -7888,22 +7911,22 @@ select option:hover {
 
     /* ------------------- Fin Cart ------------------- */
 
-        /* ------------------- Verify  ------------------- */
+    /* ------------------- Verify  ------------------- */
 
-        .containerVerify {
-            align-items: center;
-            height: 100vh;
-        }
+    .containerVerify {
+        align-items: center;
+        height: 100vh;
+    }
 
-        .leftVerify {
-            margin-top: 0px; 
-        }
+    .leftVerify {
+        margin-top: 0px;
+    }
 
-        .leftVerify img {
-            width: 80%;
-        }
-        
-        /* ------------------- Fin Verify  ------------------- */
+    .leftVerify img {
+        width: 80%;
+    }
+
+    /* ------------------- Fin Verify  ------------------- */
 }
 
 @media (max-width:630px) {
@@ -9530,11 +9553,12 @@ select option:hover {
         font-size: 30px;
         border-radius: 5px;
     }
+
     .refundBtn {
         border: 3px solid #112B3C;
         border-radius: 5px;
         font-size: 22px;
-      }
+    }
 
     #suivi {
 
@@ -9599,45 +9623,45 @@ select option:hover {
     /* Fin NavLogo */
 
 
-    
-        /* ------------------- Verify  ------------------- */
 
-        .containerVerify {
-            align-items: center;
-            height: 100vh;
-        }
+    /* ------------------- Verify  ------------------- */
 
-        .leftVerify {
-            margin-top: 0px; 
-        }
+    .containerVerify {
+        align-items: center;
+        height: 100vh;
+    }
 
-        .leftVerify img {
-            width: 500px;
-        }
+    .leftVerify {
+        margin-top: 0px;
+    }
 
-        .leftVerify form input {
-            border-radius: 40px;
-            font-size: 43px;
-        }
+    .leftVerify img {
+        width: 500px;
+    }
 
-        .btnVerify {
-            padding: 15px 30px 15px 30px;
-            border-radius: 10px;
-            margin-top: 50px;
-            font-size: 43px;
-        }
-        
-        #errorsVerify {
-            font-size: 43px;
-        }
-        
-        #succesVerify {
-            font-size: 43px;
-        }
-        
+    .leftVerify form input {
+        border-radius: 40px;
+        font-size: 43px;
+    }
+
+    .btnVerify {
+        padding: 15px 30px 15px 30px;
+        border-radius: 10px;
+        margin-top: 50px;
+        font-size: 43px;
+    }
+
+    #errorsVerify {
+        font-size: 43px;
+    }
+
+    #succesVerify {
+        font-size: 43px;
+    }
 
 
-        /* ------------------- Fin Verify  ------------------- */
+
+    /* ------------------- Fin Verify  ------------------- */
 
 
 

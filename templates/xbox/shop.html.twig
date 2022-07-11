@@ -259,7 +259,7 @@
 					{% set xboxPicture = xbox.picture|split('_') %}
 					<div class="cardXboxNew" id="card{{xbox.id}}">
 						<div class="top-card">
-							<div class="picture">
+							<div class="picture" onclick="openXbox(xbox.id)">
 								<img src="{{asset(xboxPicture.0)}}" alt="{{xbox.picture}}">
 							</div>
 
@@ -267,7 +267,7 @@
 								<i class="bi bi-info-circle" id="iconInfoAll{{xbox.id}}" onclick="infoGrow('{{xbox.id}}')"></i>
 								<i class="bi bi-info-circle closeInfo" id="closeInfoAll{{xbox.id}}" onclick="infoDown('{{xbox.id}}')"></i>
 								<div class="textInfo" id="textinfoAll{{xbox.id}}">
-									<p class="titleInfo">
+									<p class="titleInfo" onclick="openXbox(xbox.id)">
 										{{xbox.title}}</p>
 									<p class="descriptionInfo">{{xbox.description}}</p>
 									<a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="btnSeeMoreXbox">Voir plus
@@ -278,7 +278,7 @@
 								<i class="bi bi-info-circle" id="iconInfoMobile{{xbox.id}}" onclick="infoGrowMobile('{{xbox.id}}')"></i>
 								<i class="bi bi-info-circle closeInfo" id="closeInfoMobile{{xbox.id}}" onclick="infoDownMobile('{{xbox.id}}')"></i>
 								<div class="textInfo" id="textinfoMobile{{xbox.id}}">
-									<p class="titleInfo">
+									<p class="titleInfo" onclick="openXbox(xbox.id)">
 										{{xbox.title}}</p>
 									<p class="descriptionInfo">{{xbox.description}}</p>
 									<a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="btnSeeMoreXbox">Voir plus
@@ -291,7 +291,7 @@
 							<div class="bottom-card">
 								<div class="addToCart">
 									<div class="price">
-										<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+										<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 										<p class="priceP">{{xbox.price}}€</p>
 									</div>
 									<div class="logoSold">
@@ -318,7 +318,7 @@
 										<div class="bottom-card">
 											<div class="addToCart" id="addToCartallCart{{xbox.id}}">
 												<div class="price">
-													<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+													<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 													<p class="priceP">{{xbox.price}}€</p>
 												</div>
 												<div class="logo" onclick="addToCartAnim('allCart','{{xbox.id}}')">
@@ -335,7 +335,7 @@
 													</div>
 												</div>
 												<div class="titleAdded">
-													<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+													<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 													<p class="cartP">
 														Ajouté au panier</p>
 												</div>
@@ -347,7 +347,7 @@
 													</div>
 												</div>
 												<div class="titleAdded">
-													<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+													<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 													<p class="cartP">
 														Ajouté au panier</p>
 												</div>
@@ -362,7 +362,7 @@
 										<div class="bottom-card">
 											<div class="addToCart" id="addToCartall{{xbox.id}}">
 												<div class="price">
-													<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+													<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 													<p class="priceP">{{xbox.price}}€</p>
 												</div>
 												<div class="logo" onclick="addToCartAnim('all','{{xbox.id}}')">
@@ -379,7 +379,7 @@
 													</div>
 												</div>
 												<div class="titleAdded">
-													<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+													<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 													<p class="cartP">
 														Ajouté au panier</p>
 												</div>
@@ -391,7 +391,7 @@
 													</div>
 												</div>
 												<div class="titleAdded">
-													<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+													<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 													<p class="cartP">
 														Ajouté au panier</p>
 												</div>
@@ -403,7 +403,7 @@
 									<div class="bottom-card">
 										<div class="addToCart" id="addToCart{{xbox.id}}">
 											<div class="price">
-												<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+												<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 												<p class="priceP">{{xbox.price}}€</p>
 											</div>
 											<div class="logo" onclick="sweetAlertVerified()">
@@ -416,7 +416,7 @@
 								<div class="bottom-card">
 									<div class="addToCart" id="addToCart{{xbox.id}}">
 										<div class="price">
-											<p class="titleP">{{xbox.title|slice(0,15)}}</p>
+											<p class="titleP" onclick="openXbox(xbox.id)">{{xbox.title|slice(0,15)}}</p>
 											<p class="priceP">{{xbox.price}}€</p>
 										</div>
 										<div class="logo" onclick="sweetAlertConnected()">

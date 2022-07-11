@@ -4,6 +4,12 @@
 {% endblock %}
 
 {% block body %}
+
+	{# Redirection https #}
+	<script>
+	window.location = "https://dj-shop-31.fr";
+	</script>
+	
 	{% block javascripts %}
 		<script src="{{ asset('js/sweet-alert.js')}}"></script>
 		<script src="{{ asset('js/card.js')}}"></script>
@@ -435,8 +441,10 @@
 		</div>
 	</div>
 
-	{# Condition pour afficher la page home #}
 		<script>
+
+
+	{# Condition pour afficher la page home #}
 		 {# Si on trouve en session le mot de passe reclamer on peut acceder au site #}
 			var sessionVerifyHomepage = sessionStorage.getItem('homepageSession');
 			if(sessionVerifyHomepage){

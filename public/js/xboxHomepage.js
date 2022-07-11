@@ -79,6 +79,7 @@ function openXbox(id) {
 
     var url = new URL("https://dj-shop-31.fr/xbox/");
     var t= url + id;
-    console.log(t)
+   
+    console.log( toString(t))
 
 }

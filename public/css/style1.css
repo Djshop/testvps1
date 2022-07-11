@@ -1141,6 +1141,7 @@ footer .legal {
 }
 
 #homePageHide {
+    display: none;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
 }

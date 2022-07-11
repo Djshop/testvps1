@@ -254,8 +254,8 @@
 						<div class="linkBlock">
 							<a href="{{ path('app_contact') }}">Contact
 							</a>
-							<a href="">Livraisons</a>
-							<a href="">Moyens de paiments</a>
+							<a href="{{ path('app_livraisons') }}">Livraisons</a>
+							<a href="{{ path('app_paiment') }}">Moyens de paiments</a>
 
 						</div>
 
@@ -265,8 +265,8 @@
 
 						<div class="linkBlock">
 							<a href="{{ path('app_xbox_index') }}">Tout nos produits</a>
-							<a href="">A propos de DJ Shop</a>
-							<a href="">Qu'est-ce qu'une RGH</a>
+							<a href="{{ path('app_about') }}">A propos de DJ Shop</a>
+							<a href="{{ path('app_rgh') }}">Qu'est-ce qu'une RGH</a>
 						</div>
 
 					</div>
@@ -276,7 +276,13 @@
 						<div class="linkBlock">
 							<a href="{{ path('app_account') }}">Mon Profil</a>
 							<a href="{{ path('order') }}">Mes Commandes</a>
+							{% if app.user %}
 							<a href="{{ path('app_logout') }}">Déconnexion</a>
+							{% else %}
+							<a href="{{ path('login') }}">Connexion</a>
+							<a href="{{ path('app_register') }}">Inscription</a>
+							{% endif %}
+							
 						</div>
 
 					</div>

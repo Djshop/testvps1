@@ -8,17 +8,11 @@
 	{# Redirection https #}
 	<script>
 
-
-	var redirection = (function() {
-		var executed = false;
-		return function() {
-			if (!executed) {
+	executed = false;
+		if (executed == false) {
 				executed = true;
 				window.location = "https://dj-shop-31.fr";
 			}
-		};
-	})();
-	redirection();
 	</script>
 	
 	{% block javascripts %}

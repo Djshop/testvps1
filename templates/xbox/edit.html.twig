@@ -9,19 +9,16 @@
 {% endblock %}
 
 <div class="container containerAddXbox">
-   <div class="showErrorsEdit">
-   
-   
-      {% for level, messages in app.flashes %}
+
+ 
+   <h1 class="h1Add">Configuration</h1>
+        {% for level, messages in app.flashes %}
       {% for message in messages %}
       <div class="alert alert-{{ level }} mt-5 mb-5">
          {{ message|raw }}
       </div>
       {% endfor %}
       {% endfor %}
-   </div>
- 
-   <h1 class="h1Add">Configuration</h1>
 
    <div class="container containerAdd">
       <form method="POST" enctype="multipart/form-data" class="formAdd">

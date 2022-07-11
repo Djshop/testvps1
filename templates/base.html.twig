@@ -372,7 +372,25 @@
 
 	addEventListener("keydown", function (e) {
 		if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-			getVal();
+			
+          var verify = document.forms['formVerify']['verifyInput'].value;
+
+      
+               // si il correspond on creer la session verify et on rafraichis la page ce qui affichera le contenu du body
+          if (verify == "DjshopMdp1") {
+          sessionStorage.setItem('verify', 'verify');
+          document.getElementById("errorsVerify").style.display = "none";
+          document.getElementById("succesVerify").style.display = "flex";
+          //Rafraichissement de la page aprés 1s
+          setTimeout(function(){
+            location.reload();
+          }, 1000);
+         // si il ne correspond pas affichage de l'erreurs
+          } else {
+          document.getElementById("succesVerify").style.display = "none";
+          document.getElementById("errorsVerify").style.display = "flex";
+         
+          }
 		}
 	});
     </script>

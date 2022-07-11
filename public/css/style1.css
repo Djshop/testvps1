@@ -8377,6 +8377,7 @@ select option:hover {
 
     #verified a {
         font-size: 40px;
+        margin-top: 30px;
     }
 
     footer .logo {

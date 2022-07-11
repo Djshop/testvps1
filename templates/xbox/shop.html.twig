@@ -22,8 +22,8 @@
 
 
 
-	<div id="homePageHide" class="homePage">
-		
+	<div
+		id="homePageHide" class="homePage">
 		{# <div class="bikeHome" id="bikeOne">
 									<div id="trailOne" class="trail" style="--cover:url(/image/trailOne.png)"></div>
 									<div class="bike">
@@ -441,10 +441,6 @@
 			var sessionVerifyHomepage = sessionStorage.getItem('homepageSession');
 			if(sessionVerifyHomepage){
 			document.getElementById("homePageHide").style.display = "none";
-				document.getElementById("optionHide").style.display = "flex";
-				document.getElementById("containerShopHide").style.display = "flex";
-				document.getElementById("up").style.display = "flex";
-				document.getElementById("footer").style.display = "flex";
 
 		// Sinon on tombe sur le formulaire reclamant le mdp et depuis n'importe quel page  et on cache le contenu du body
 			}else{
@@ -452,7 +448,6 @@
 				document.getElementById("containerShopHide").style.display = "none";
 				document.getElementById("up").style.display = "none";
 				document.getElementById("footer").style.display = "none";
-				document.getElementById("homePageHide").style.display = "flex!important";
 		
       			
     		}

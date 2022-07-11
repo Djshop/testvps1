@@ -1529,6 +1529,7 @@ class XboxController extends AbstractController
                             $xbox->setPicture($finalPictureAdd);
                             $xboxRepository->add($xbox);
                             return $this->redirectToRoute('app_xbox_edit_picture', ['id' => $xbox->getId()], Response::HTTP_SEE_OTHER);
+                            $this->addFlash('success', 'Votre(Vos) photo(s) sont uploadée(s)');
                         } else {
                             $this->addFlash('danger', implode('<br>', $errorsAddPicture));
                         }

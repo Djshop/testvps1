@@ -77,7 +77,7 @@ function homepagePhone() {
 
 function openXbox(id) {
     console.log(id)
-
     var url = new URL("https://dj-shop-31.fr/xbox/");
     url.searchParams.append('id',id);
+window.location = url;
 }

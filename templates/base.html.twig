@@ -307,7 +307,7 @@
 						<div id="succesVerify" class="alert text-center alert-success">
 							Mot de passe correct
 						</div>
-						<form method="Post" id="formVerify">
+						<form method="Post" id="formVerify" onsubmit="getVal()">
 							<input type="password" id="verifyInput" name="verifyInput" placeholder="Mot de passe ?"  >
 							<div class="btnVerify" onclick="getVal()">
 								Entrez
@@ -368,31 +368,6 @@
 			
     }
 
-		{# On active le js si l'on appui sur la touche ENTER #}
-
-	addEventListener("keydown", function (e) {
-		if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-			
-          var verify = document.forms['formVerify']['verifyInput'].value;
-
-      
-               // si il correspond on creer la session verify et on rafraichis la page ce qui affichera le contenu du body
-          if (verify == "DjshopMdp1") {
-          sessionStorage.setItem('verify', 'verify');
-          document.getElementById("errorsVerify").style.display = "none";
-          document.getElementById("succesVerify").style.display = "flex";
-          //Rafraichissement de la page aprés 1s
-          setTimeout(function(){
-            location.reload();
-          }, 1000);
-         // si il ne correspond pas affichage de l'erreurs
-          } else {
-          document.getElementById("succesVerify").style.display = "none";
-          document.getElementById("errorsVerify").style.display = "flex";
-         
-          }
-		}
-	});
     </script>
  
 

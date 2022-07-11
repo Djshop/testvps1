@@ -1451,6 +1451,7 @@ class XboxController extends AbstractController
                         $updatePicture = implode('_', $notDeletedPicture);
                         $xbox->setPicture($updatePicture);
                         $xboxRepository->add($xbox);
+                        $this->addFlash('success', 'Photo supprimé');
                         return $this->redirectToRoute('app_xbox_edit_picture', ['id' => $xbox->getId()], Response::HTTP_SEE_OTHER);
                     }
 
@@ -1528,7 +1529,7 @@ class XboxController extends AbstractController
 
                             $xbox->setPicture($finalPictureAdd);
                             $xboxRepository->add($xbox);
-                            $this->addFlash('success', 'Upload Réussi');
+                            $this->addFlash('success', 'Upload réussi');
                             return $this->redirectToRoute('app_xbox_edit_picture', ['id' => $xbox->getId()], Response::HTTP_SEE_OTHER);
                             
                             

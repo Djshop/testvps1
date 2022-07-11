@@ -12,6 +12,13 @@
 
 
 	<div class="container containerEditPicture">
+    			{% for level, messages in app.flashes %}
+				{% for message in messages %}
+					<div class="alert alert-{{ level }} mt-5 mb-5 errorsAdd">
+						{{ message|raw }}
+					</div>
+				{% endfor %}
+			{% endfor %}
 		<div class="editPicture">
 			<div class="backButton ">
 				<form method="POST">
@@ -45,13 +52,7 @@
 					Photos</p>
 
 			</div>
-			{% for level, messages in app.flashes %}
-				{% for message in messages %}
-					<div class="alert alert-{{ level }} mt-5 mb-5 errorsAdd">
-						{{ message|raw }}
-					</div>
-				{% endfor %}
-			{% endfor %}
+
 			<div class="listPictureContainer">
 				<table class="table">
 

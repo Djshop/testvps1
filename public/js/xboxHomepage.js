@@ -77,11 +77,11 @@ function homepagePhone() {
 
 function openXbox(id) {
 
-    var url = new URL("https://dj-shop-31.fr/xbox/");
-    toString(url)
-    toString(id)
-    var t= url .id;
+
+
+    let str = 'https://dj-shop-31.fr/xbox/';
+    str += id;
    
-    console.log(t)
+    console.log(str)
 
 }

@@ -76,12 +76,7 @@ function homepagePhone() {
 }
 
 function openXbox(id) {
-
-
-
-    let str = 'https://dj-shop-31.fr/xbox/';
-    str += id;
-   
-    console.log(str)
-
+    let strUrl = 'https://dj-shop-31.fr/xbox/';
+    strUrl += id;
+    window.location = strUrl;
 }

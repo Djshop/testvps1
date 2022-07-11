@@ -3215,6 +3215,11 @@ input {
     font-size: 20px;
     margin: 0 !important;
     padding: 0 !important;
+    cursor: pointer;
+}
+
+.bottom-card .addToCart .price .titleP:hover {
+    color: #f66b0e;
 }
 
 .bottom-card .addToCart .price .priceP {

@@ -2114,8 +2114,10 @@ input {
 }
 
 .errorsAdd {
-margin: 0 auto;
-width: 50%;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /*  */

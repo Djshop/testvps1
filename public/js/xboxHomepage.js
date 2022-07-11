@@ -75,8 +75,12 @@ function homepagePhone() {
 
 }
 
+//Fonction pour redirigier sur la page de la console en cliquant depuis l'image ou le titre de la console 
 function openXbox(id) {
+    //On definit l'url cible
     let strUrl = 'https://dj-shop-31.fr/xbox/';
+    //on ajoute a l'url cible l'id de la console cliqué , préalablement rentré en parametre de la fonction en tant que value "id"
     strUrl += id;
+    //On redirige vers l'url cible
     window.location = strUrl;
 }

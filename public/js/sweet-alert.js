@@ -23,6 +23,9 @@ function sweetAlertVerified() {
       icon: "warning",
       button: "Ok",
     })
+    .then((redirect) => {
+      window.location = "/account";
+});
   
   
 }

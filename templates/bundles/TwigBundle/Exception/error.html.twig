@@ -1,14 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Erreur 404{% endblock %}
-{% block navbar %}
+{% block title %}Erreur 404
 {% endblock %}
+
 {% block body %}
-{% block cart %}
-{% endblock cart %}
-{% block footer %}{% endblock footer %}
-
-
+	{% block navbar %}{% endblock %}
+	{% block cart %}{% endblock cart %}
+	{% block footer %}{% endblock footer %}
 
 
 	<div class="container container404">
@@ -16,5 +14,6 @@
 		<h1>Nous n'avons pas réussi a trouvé cette page</h1>
         <h4><a href="{{ path("app_xbox_index")}}">Retour au Site</a></h4>
 	</div>
+
 
 {% endblock %}

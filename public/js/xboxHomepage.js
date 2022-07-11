@@ -78,8 +78,10 @@ function homepagePhone() {
 function openXbox(id) {
 
     var url = new URL("https://dj-shop-31.fr/xbox/");
-    var t= url + id;
+    toString(url)
+    toString(id)
+    var t= url .id;
    
-    console.log( toString(t))
+    console.log(t)
 
 }

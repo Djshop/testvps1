@@ -4302,6 +4302,9 @@ input {
     background-color: #fff;
 
 }
+#dataLine .outputData {
+    text-transform: lowercase!important;
+}
 
 
 #btnSumbitEdit {

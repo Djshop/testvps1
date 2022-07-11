@@ -4302,7 +4302,7 @@ input {
     background-color: #fff;
 
 }
-#dataLine .outputData {
+#dataLineEmail .outputData {
     text-transform: lowercase!important;
 }
 

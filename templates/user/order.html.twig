@@ -24,6 +24,19 @@
             </div>
         </div>
     </div>
+       <div class="containerDashboardResponsive">
+        <h1 class="h1TitleResponsive" >Liste des commandes</h1>
+        <div class="filterContainerResponsive">
+
+         <div id="userOrdersBtnResponsive" class="filterCard" onclick="userOrdersResponsive()"><i class="fa-solid fa-list-check"></i>
+                    <p>Mes Commandes</p>
+                </div>
+                <div id="userRefundsBtnResponsive" class="filterCard" onclick="userRefundsResponsive()"><i
+                        class="fa-solid fa-money-check-dollar"></i>
+                    <p>Mes remboursements</p>
+                </div>
+        </div>
+    </div>
     <div class="dashboardContainerList">
         <div class="dashList" id="userOrders">
             {% for level, messages in app.flashes %}

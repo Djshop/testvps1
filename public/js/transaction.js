@@ -141,3 +141,25 @@ function userRefunds() {
  
     
 }
+function userOrdersResponsive() {
+   
+    document.getElementById("userRefunds").style.animationName = "opacityDown" ;
+    document.getElementById("userRefunds").style.display = "none" ;
+    document.getElementById("userOrders").style.animationName = "opacityUp" ;
+    document.getElementById("userOrders").style.display = "block" ;
+    document.getElementById("userRefundsBtnResponsive").style.backgroundColor = "#107c105e" ;
+    document.getElementById("userOrdersBtnResponsive").style.backgroundColor = "#107C10" ;
+ 
+    
+}
+function userRefundsResponsive() {
+   
+    document.getElementById("userOrders").style.animationName = "opacityDown" ;
+    document.getElementById("userOrders").style.display = "none" ;
+    document.getElementById("userRefunds").style.animationName = "opacityUp" ;
+    document.getElementById("userRefunds").style.display = "block" ;
+    document.getElementById("userOrdersBtnResponsive").style.backgroundColor = "#107c105e" ;
+    document.getElementById("userRefundsBtnResponsive").style.backgroundColor = "#107C10" ;
+ 
+    
+}

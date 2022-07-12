@@ -9825,6 +9825,17 @@ select option:hover {
 
     /* ------------------- Fin Show ------------------- */
 
+    /* Responsive finition */
+   
+    footer {
+        width: 101%;
+    }
+    
+    .navbar {
+    margin-right: -10px;
+    }
+    /* Responsive finition */
+
 
 
 }

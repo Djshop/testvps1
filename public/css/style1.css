@@ -9145,7 +9145,7 @@ select option:hover {
     }
 
     .cartCards .label {
-        font-size: 40px;
+        font-size: 55px;
     }
 
     .mainTwoPaypal {
@@ -9882,6 +9882,51 @@ select option:hover {
 
 
     /* ------------------- Fin Show ------------------- */
+
+    /* ------------------- Page User Order ------------------- */
+
+    .orderShow {
+        width: 95%;
+    }
+
+    .cardsLabel {
+        font-size: 40px;
+    }
+
+    .cartCards .contentPaypal {
+        width: 95%;
+        font-size: 35px;
+    }
+    .adressCards i {
+        font-size: 35px;
+        margin-top: 8px;
+    }
+
+    .cardsLabelProducts {
+        font-size: 40px;
+    }
+
+    .contentPaypalProduct .picture img {
+        height: 275px;
+    }
+    .cartCardsProduct {
+        margin-bottom: 150px;
+    }
+
+    .contentPaypalProduct .text .titleXboxPaypal {
+        font-size: 35px;
+        margin-left: 15px;
+    }
+
+    .contentPaypalProduct .text .description{
+        display: none;
+    }
+    #iconCloseUser {
+        top: 1.5%;
+        right: 1%;
+        font-size: 60px;
+    }
+    /* ------------------- Fin User Order ------------------- */
 
     /* Responsive finition */
 

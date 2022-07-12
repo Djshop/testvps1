@@ -125,8 +125,10 @@ function userOrders() {
     document.getElementById("userRefunds").style.display = "none" ;
     document.getElementById("userOrders").style.animationName = "opacityUp" ;
     document.getElementById("userOrders").style.display = "block" ;
-    document.getElementById("userRefundsBtn").style.backgroundColor = "#107c105e" ;
-    document.getElementById("userOrdersBtn").style.backgroundColor = "#107C10" ;
+    document.getElementById("userRefundsBtn").style.backgroundColor = "#20537547" ;
+    document.getElementById("userOrdersBtn").style.backgroundColor = "#205375" ;
+    document.getElementById("userRefundsBtn").style.color = "#efefef" ;
+    document.getElementById("userOrdersBtn").style.color = "#F66B0E" ;
  
     
 }
@@ -136,8 +138,10 @@ function userRefunds() {
     document.getElementById("userOrders").style.display = "none" ;
     document.getElementById("userRefunds").style.animationName = "opacityUp" ;
     document.getElementById("userRefunds").style.display = "block" ;
-    document.getElementById("userOrdersBtn").style.backgroundColor = "#107c105e" ;
-    document.getElementById("userRefundsBtn").style.backgroundColor = "#107C10" ;
+    document.getElementById("userOrdersBtn").style.backgroundColor = "#20537547" ;
+    document.getElementById("userRefundsBtn").style.backgroundColor = "#205375" ;
+    document.getElementById("userOrdersBtn").style.color = "#efefef" ;
+    document.getElementById("userRefundsBtn").style.color = "#F66B0E" ;
  
     
 }
@@ -147,8 +151,10 @@ function userOrdersResponsive() {
     document.getElementById("userRefunds").style.display = "none" ;
     document.getElementById("userOrders").style.animationName = "opacityUp" ;
     document.getElementById("userOrders").style.display = "block" ;
-    document.getElementById("userRefundsBtnResponsive").style.backgroundColor = "#107c105e" ;
-    document.getElementById("userOrdersBtnResponsive").style.backgroundColor = "#107C10" ;
+    document.getElementById("userRefundsBtnResponsive").style.backgroundColor = "#20537547" ;
+    document.getElementById("userOrdersBtnResponsive").style.backgroundColor = "#205375" ;
+    document.getElementById("userRefundsBtnResponsive").style.color = "#efefef" ;
+    document.getElementById("userOrdersBtnResponsive").style.color = "#F66B0E" ;
  
     
 }
@@ -158,8 +164,10 @@ function userRefundsResponsive() {
     document.getElementById("userOrders").style.display = "none" ;
     document.getElementById("userRefunds").style.animationName = "opacityUp" ;
     document.getElementById("userRefunds").style.display = "block" ;
-    document.getElementById("userOrdersBtnResponsive").style.backgroundColor = "#107c105e" ;
-    document.getElementById("userRefundsBtnResponsive").style.backgroundColor = "#107C10" ;
+    document.getElementById("userOrdersBtnResponsive").style.backgroundColor = "#20537547" ;
+    document.getElementById("userRefundsBtnResponsive").style.backgroundColor = "#205375" ;
+    document.getElementById("userOrdersBtnResponsive").style.color = "#efefef" ;
+    document.getElementById("userRefundsBtnResponsive").style.color = "#F66B0E" ;
  
     
 }

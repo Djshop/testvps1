@@ -39,7 +39,7 @@ function homepage() {
 function homepagePhone() {
     document.getElementById("xbxLogoAnimPhone").style.position = 'absolute';
     document.getElementById("xbxLogoAnimPhone").style.top = '50%';
-    document.getElementById("xbxLogoAnimPhone").style.animationName = 'absolutePhone';
+    document.getElementById("xbxLogoAnimPhone").style.animationName = 'absolute';
     document.getElementById("fontxbxLogoPhone").style.backgroundColor = 'green';
     setTimeout(function () {
         document.getElementById("xbxLogoAnimPhone").style.width = '300%';

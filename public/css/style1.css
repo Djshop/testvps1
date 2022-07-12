@@ -9803,6 +9803,15 @@ select option:hover {
          max-height: unset; 
     }
 
+    .miniGalleryShow .imgGalleryShow {
+        height: 180px;
+    }
+
+    .miniGalleryShow {
+        height: 180px; 
+        width: 210px;
+        max-height: 180px;
+    }
     .miniGalleryShow:hover .imgGalleryShow {
         height: 180px;
     }

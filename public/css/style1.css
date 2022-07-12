@@ -5734,10 +5734,12 @@ input {
 
 .mainOnePaypal {
     width: 50%;
+    position: relative;
     margin: 0 auto;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+    padding-bottom: 50px;
 }
 
 .mainTwoPaypal {

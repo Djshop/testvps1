@@ -9109,6 +9109,7 @@ select option:hover {
     .mainOnePaypal {
         width: 100%;
         border-radius: 15px;
+        padding-bottom: 150px;
     }
 
     .cartCards .deliveryLabel {

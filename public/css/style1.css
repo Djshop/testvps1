@@ -9424,6 +9424,9 @@ select option:hover {
     top: 75%;
 
     }
+    .homePage {
+        width: 101%;
+    }
 
     /* ------------------- Fin Homepage  ------------------- */
 

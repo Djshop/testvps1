@@ -9762,7 +9762,10 @@ select option:hover {
         top: -130px;
         right: 10%;
     }
+    .fullPicture .carousel {
+        overflow: unset;
 
+    }
 
     /* ------------------- Fin Show ------------------- */
 

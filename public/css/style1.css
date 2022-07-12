@@ -3391,6 +3391,7 @@ input {
     margin-top: -1000px;
     animation-duration: 2.1s;
     animation-iteration-count: 1;
+    width: 95%;
 }
 
 .cardXboxNew .top-card .info .textInfo .titleInfo {

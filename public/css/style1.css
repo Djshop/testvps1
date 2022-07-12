@@ -2688,6 +2688,7 @@ input {
     overflow: hidden;
     margin: 0 auto;
 }
+
 .fullPicture .carousel-inner {
     overflow: hidden !important;
     width: 60%;
@@ -4314,8 +4315,9 @@ input {
     background-color: #fff;
 
 }
+
 #dataLineEmail .outputData {
-    text-transform: lowercase!important;
+    text-transform: lowercase !important;
 }
 
 
@@ -7194,6 +7196,14 @@ select option:hover {
     /* ------------------- Fin Shop ------------------- */
 
 
+    /* ------------------- Page Show ------------------- */
+    .fullPicture .carousel-inner {
+        width: 75%;
+    }
+
+    /* ------------------- Fin Show ------------------- */
+
+
 
 }
 
@@ -7590,6 +7600,17 @@ select option:hover {
 
     /* ------------------- Fin Verify  ------------------- */
 
+    /* ------------------- Page Show ------------------- */
+    .fullPicture .carousel-inner {
+        width: 95%;
+    }
+
+    #fullPictureContain {
+        margin-top: -20px;
+    }
+
+    /* ------------------- Fin Show ------------------- */
+
 
 }
 
@@ -7806,6 +7827,31 @@ select option:hover {
 
     /* ------------------- Fin List user ------------------- */
 
+    /* ------------------- Page Show ------------------- */
+    .fullPicture .carousel-inner {
+        width: 100%;
+    }
+
+    #fullPictureContain {
+        margin-top: -20px;
+    }
+
+    .closeFullIcon {
+        font-size: 50px;
+        top: -85px;
+        right: 20%;
+    }
+
+    .fullPicture .carousel {
+        overflow: unset;
+
+    }
+    .carousel-item {
+        width: 700px;
+    }
+
+    /* ------------------- Fin Show ------------------- */
+
 
 
 }
@@ -7978,6 +8024,18 @@ select option:hover {
     }
 
     /* Fin Homepage */
+
+    /* ------------------- Page Show ------------------- */
+    .carousel-control-prev-icon {
+        margin-right: -200px;
+    }
+
+    .carousel-control-next-icon {
+        margin-left: -200px;
+    }
+
+
+    /* ------------------- Fin Show ------------------- */
 }
 
 @media (max-width:576px) {
@@ -9682,6 +9740,31 @@ select option:hover {
 
 
     /* ------------------- Fin Verify  ------------------- */
+
+     /* ------------------- Page Show ------------------- */
+     .carousel-control-prev-icon {
+        margin-right: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .carousel-control-next-icon {
+        margin-left: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .carousel-item{
+        width: 100%;
+    }
+    .closeFullIcon {
+        font-size: 100px;
+        top: -130px;
+        right: 10%;
+    }
+
+
+    /* ------------------- Fin Show ------------------- */
 
 
 

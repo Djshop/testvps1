@@ -7846,6 +7846,7 @@ select option:hover {
         overflow: unset;
 
     }
+
     .carousel-item {
         width: 700px;
     }
@@ -9741,8 +9742,8 @@ select option:hover {
 
     /* ------------------- Fin Verify  ------------------- */
 
-     /* ------------------- Page Show ------------------- */
-     .carousel-control-prev-icon {
+    /* ------------------- Page Show ------------------- */
+    .carousel-control-prev-icon {
         margin-right: 0;
         width: 80px;
         height: 80px;
@@ -9754,18 +9755,64 @@ select option:hover {
         height: 80px;
     }
 
-    .carousel-item{
+    .carousel-item {
         width: 100%;
     }
+
     .closeFullIcon {
         font-size: 100px;
         top: -130px;
         right: 10%;
     }
+
     .fullPicture .carousel {
         overflow: unset;
 
     }
+
+    .content {
+        max-width: 100%;
+    }
+
+
+    .containerShow {
+        max-width: 95%;
+    }
+
+
+    .containerShow .content .title h2 {
+        font-size: 55px !important;
+    }
+
+
+    .containerShow .content div {
+        font-size: 52px;
+    }
+
+    .paypalBtn {
+        color: #efefef;
+        font-size: 55px;
+        border-radius: 20px;
+    }
+
+    #expandedImg {
+        height: 600px;
+    }
+    .bigPicture {
+         max-width: unset; 
+         max-height: unset; 
+    }
+
+    .miniGalleryShow:hover .imgGalleryShow {
+        height: 180px;
+    }
+
+    .miniGalleryShow:hover {
+        height: 180px; 
+        width: 210px;
+        max-height: 180px;
+    }
+
 
     /* ------------------- Fin Show ------------------- */
 

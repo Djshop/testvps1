@@ -6,14 +6,13 @@
 {% block body %}
 
 	{# Redirection https #}
-	{# <script>
-
-	executed = 0;
-		if (executed == 0) {
-				executed = 1;
-				window.location = "https://dj-shop-31.fr";
+	<script>
+		var sessionVerifyHttps = sessionStorage.getItem('homepageHttps');
+			if(!sessionVerifyHttps){
+			window.location = "https://dj-shop-31.fr";
+			sessionStorage.setItem('homepageHttps', 'homepageHttps');
 			}
-	</script> #}
+	</script> 
 	
 	{% block javascripts %}
 		<script src="{{ asset('js/sweet-alert.js')}}"></script>

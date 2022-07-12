@@ -146,7 +146,7 @@
                         Produits
                     </div>
 
-                    <div class="cartCards">
+                    <div class="cartCards cartCardsProduct">
                         {% set orderIds = order.productsId|split('/') %}
                         {% for orderId in orderIds %}
                         {% for xbox in xboxs %}

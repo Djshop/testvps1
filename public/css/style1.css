@@ -4083,7 +4083,7 @@ input {
 
 .orderShow {
     width: 40%;
-    height: 70%;
+    /* height: 70%; */
     position: relative;
     background-color: #112B3C;
     border-radius: 10px;
@@ -4100,6 +4100,10 @@ input {
     bottom: 0;
 }
 
+.cartCards .cartCardsProduct {
+    margin-bottom: 50px;
+}
+
 #iconCloseUser {
     position: absolute;
     top: 0.5%;
@@ -4109,6 +4113,7 @@ input {
     z-index: 10;
     cursor: pointer;
 }
+
 #iconCloseUser:hover {
     color: rgba(255, 0, 0, 0.597);
 

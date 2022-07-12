@@ -2572,7 +2572,7 @@ input {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: yellow;
-    color: black;
+    color: #efefef6f;
     font-size: 20px;
     font-weight: 700;
     border-radius: 10px;
@@ -8330,6 +8330,7 @@ select option:hover {
 
     .cardXboxNew {
         height: 1000px;
+        border-radius: 25px;
     }
 
     .cardXboxNew .bottom-card {
@@ -9809,7 +9810,6 @@ select option:hover {
     }
 
     .paypalBtn {
-        color: #efefef;
         font-size: 55px;
         border-radius: 20px;
     }

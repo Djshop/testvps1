@@ -28,7 +28,7 @@ function homepage() {
             }, 2000);
             document.getElementById("containerShopHide").style.display = "flex";
             document.getElementById("optionHide").style.display = "flex";
-            document.getElementById("footer").style.display = "flex";
+            document.getElementById("footerId").style.display = "flex";
             document.getElementById("up").style.display = "flex";
             sessionStorage.setItem('homepageSession', 'homepageSession');
         }, 500);
@@ -66,7 +66,7 @@ function homepagePhone() {
             }, 2000);
             document.getElementById("containerShopHide").style.display = "flex";
             document.getElementById("optionHide").style.display = "flex";
-            document.getElementById("footer").style.display = "flex";
+            document.getElementById("footerId").style.display = "flex";
             document.getElementById("up").style.display = "flex";
             sessionStorage.setItem('homepageSession', 'homepageSession');
         }, 500);

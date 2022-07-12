@@ -41,7 +41,7 @@ function homepagePhone() {
     document.getElementById("xbxLogoAnimPhone").style.top = '50%';
     document.getElementById("xbxLogoAnimPhone").style.left = '50%';
     document.getElementById("xbxLogoAnimPhone").style.transform = 'translate(-50% , -50%)';
-    document.getElementById("xbxLogoAnimPhone").style.animationName = 'absolute';
+    document.getElementById("xbxLogoAnimPhone").style.animationName = 'absolutePhone';
     document.getElementById("fontxbxLogoPhone").style.backgroundColor = 'green';
     setTimeout(function () {
         document.getElementById("xbxLogoAnimPhone").style.width = '300%';

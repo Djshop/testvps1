@@ -9384,7 +9384,7 @@ select option:hover {
     #djLogo {
         width: 900px;
         margin-left: 0px;
-        margin-top: 150px
+        margin-top: 200px
     }
 
     #djLogoVisit {
@@ -9418,6 +9418,11 @@ select option:hover {
     .homepageP {
         font-size: 40px;
         width: 100%;
+        top: 70%;
+    }
+    .xbxLogoAnimPhone {
+    top: 75%;
+
     }
 
     /* ------------------- Fin Homepage  ------------------- */

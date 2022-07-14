@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}DJ SHOP - Modification mot de passe
+{% block title %}DJ SHOP - Réinitialisation mot de passe
 {% endblock %}
 
 {% block body %}
@@ -13,7 +13,7 @@
 			<div class="rightBody">
 				<div class="formLogin">
 					<div class="headLogin">
-						<p>Renitialisation mot de passe</p>
+						<p>Réinitialisation mot de passe</p>
 					</div>
 				{% endif %}
 				{% for level, messages in app.flashes %}
@@ -28,7 +28,7 @@
 
 					{{ form_start(resetForm) }}
 					{{ form_row(resetForm.plainPassword) }}
-					<button class="btnConnexion">Renitialiser Mot de passe</button>
+					<button class="btnConnexion">Réinitialiser mot de passe</button>
 					{{ form_end(resetForm) }}
 
 				</div>

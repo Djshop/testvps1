@@ -30,10 +30,10 @@
             <div class="inputsContact">
                 {% if not app.user %}
                 <div class="inputContact">
-                    <input type="text" name="contactName" placeholder="Votre Nom">
+                    <input type="text" name="contactName" placeholder="Votre nom">
                 </div>
                 <div class="inputContact">
-                    <input type="email" name="emailSender" placeholder="Votre Email">
+                    <input type="email" name="emailSender" placeholder="Votre email">
                 </div>
                 {% endif %}
                 <div class="inputContact">
@@ -41,11 +41,10 @@
                     <optgroup>
                         <option value="">--- Choisir un sujet ---</option>
                         {% if app.user %}
-                        <option value="Je n'ai pas reçus ma commande">Je n'ai pas reçus ma commande</option>
-                        <option value="Je n'arrive pas a commander">Je n'arrive pas a commander</option>
+                        <option value="Je n'ai pas reçu ma commande">Je n'ai pas reçu ma commande</option>
+                        <option value="Je n'arrive pas à commander">Je n'arrive pas à commander</option>
                         {% else %}
-                        <option value="J'ai un soucis au moment de creer mon compte">J'ai un soucis pour la création mon
-                            compte</option>
+                        <option value="J'ai un soucis au moment de créer mon compte">J'ai un soucis au moment de créer mon compte</option>
                         {% endif %}
                         <option value="other">Autres...</option>
                     </optgroup>
@@ -53,10 +52,10 @@
                   
                 </div>
                 <div class="inputContact"  id="otherSubject">
-                    <input type="text" name="other" placeholder="Préciser...">
+                    <input type="text" name="other" placeholder="Précisez...">
                 </div>
                 <div class="inputContact">
-                    <input type="text" name="textAreaContact" placeholder="Votre Message">
+                    <input type="text" name="textAreaContact" placeholder="Votre message">
                 </div>
             </div>
 
@@ -64,7 +63,7 @@
      
                 <button type="submit" class="btnAnim">
                     <div class="btnTextFormContact">
-                        Envoyez <i class="fa-solid fa-paper-plane"></i>
+                        Envoyer <i class="fa-solid fa-paper-plane"></i>
                     </div>
                 </button>
             </div>

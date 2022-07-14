@@ -15,14 +15,14 @@
 
 
                 <div id="goodTransactionBtn" class="filterCard" onclick="goodTransaction()"><i class="fa-solid fa-list-check"></i>
-                    <p>Console a expedié</p>
+                    <p>Consoles à expédier</p>
                 </div>
                 <div id="refundTransactionBtn" class="filterCard" onclick="refundTransaction()"><i
                         class="fa-solid fa-money-check-dollar"></i>
-                    <p>Console a remboursez</p>
+                    <p>Consoles à rembourser</p>
                 </div>
                 <div id="cancelTransactionBtn" class="filterCard" onclick="cancelTransaction()"><i class="fa-solid fa-list"></i>
-                    <p>Vente annulez</p>
+                    <p>Ventes annulées</p>
                 </div>
             </div>
         </div>
@@ -34,14 +34,14 @@
 
 
             <div id="goodTransactionBtnResponsive" class="filterCardResponsive" onclick="goodTransactionResponsive()"><i class="fa-solid fa-list-check"></i>
-                 <p>Console a expedié</p>
+                 <p>Consoles à expédier</p>
             </div>
             <div id="refundTransactionBtnResponsive" class="filterCardResponsive" onclick="refundTransactionResponsive()"><i
                         class="fa-solid fa-money-check-dollar"></i>
-                <p>Console a remboursez</p>
+                <p>Consoles à rembourser</p>
             </div>
             <div id="cancelTransactionBtnResponsive" class="filterCardResponsive" onclick="cancelTransactionResponsive()"><i class="fa-solid fa-list"></i>
-                <p>Vente annulez</p>
+                <p>Ventes annulées</p>
             </div>
         </div>
     </div>
@@ -60,15 +60,15 @@
             {% if countWaiting == 0 %}
 
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune commande </h1>
+                <h1>Vous n'avez aucune commandes en cours</h1>
             </div>
             {% else %}
             <div class="itemsTh">
                 <div class="th thNumber">Numéro de commande</div>
-                <div class="th thProductsName">Nom des Produits</div>
-                <div class="th thNumberProducts">Nombre de Produit</div>
-                <div class="th thTotal">Prix Total</div>
-                <div class="th thStatus">Etats de la livraison</div>
+                <div class="th thProductsName">Nom des produits</div>
+                <div class="th thNumberProducts">Quantité</div>
+                <div class="th thTotal">Prix total</div>
+                <div class="th thStatus">État de la livraison</div>
             </div>
             {% for order in orders %}
             {% if order.shippingStatus != "cancel" %}
@@ -127,7 +127,7 @@
      
                 <button type="submit" class="btnAnim">
                     <div class="btnTextFormContact">
-                        Envoyez <i class="fa-solid fa-paper-plane"></i>
+                        Envoyer <i class="fa-solid fa-paper-plane"></i>
                     </div>
                 </button>
             </div>
@@ -156,7 +156,7 @@
      
                 <button type="submit" class="btnAnim">
                     <div class="btnTextFormContact">
-                        Envoyez <i class="fa-solid fa-paper-plane"></i>
+                        Envoyer <i class="fa-solid fa-paper-plane"></i>
                     </div>
                 </button>
             </div>
@@ -264,15 +264,15 @@
             {% if countRefund == 0 %}
 
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune commande a remboursé</h1>
+                <h1>Vous n'avez aucune commandes à rembourser</h1>
             </div>
             {% else %}
             <div class="itemsTh">
                 <div class="th thNumber">Numéro de commande</div>
-                <div class="th thProductsName">Nom des Produits</div>
-                <div class="th thNumberProducts">Nombre de Produit</div>
-                <div class="th thTotal">Prix Total</div>
-                <div class="th thStatus">Etats de la livraison</div>
+                <div class="th thProductsName">Nom des produits</div>
+                <div class="th thNumberProducts">Quantité</div>
+                <div class="th thTotal">Prix total</div>
+                <div class="th thStatus">État de la livraison</div>
             </div>
             {% for order in orders %}
             {% if order.shippingStatus == "refund"  %}
@@ -300,7 +300,7 @@
 
 
 
-                    <button class="refundBtn" onclick="addRefund('block','refund{{order.id}}');">Remboursez la commande</button>
+                    <button class="refundBtn" onclick="addRefund('block','refund{{order.id}}');">Rembourser la commande</button>
                     <script>
                         var addRefund = function (value, object) {
                             document.getElementById(object).style.display = value;
@@ -322,10 +322,10 @@
                                 </script>
                                 <form method="POST" class="formAdd">
                                     <input type="hidden" name="refundForm" value="submited">
-                                    <label for="refund">Entrez le N° de transaction Paypal</label>
+                                    <label for="refund">Entrer le N° de transaction Paypal</label>
                                     <input type="text" id="refund" name="refund">
                                     <input type="hidden" name="orderId" value="{{ order.id }}">
-                                    <button type="submit">Validez</button>
+                                    <button type="submit">Valider</button>
                                 </form>
                             </div>
                         </div>
@@ -426,16 +426,16 @@
             {% if countCancel == 0 %}
           
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune commande d'annulez</h1>
+                <h1>Vous n'avez aucune commandes annulées</h1>
             </div>
             {% else %}
             
             <div class="itemsTh">
                 <div class="th thNumber">Numéro de commande</div>
-                <div class="th thProductsName">Nom des Produits</div>
-                <div class="th thNumberProducts">Nombre de Produit</div>
-                <div class="th thTotal">Prix Total</div>
-                <div class="th thStatus">Etats de la livraison</div>
+                <div class="th thProductsName">Nom des produits</div>
+                <div class="th thNumberProducts">Quantité</div>
+                <div class="th thTotal">Prix total</div>
+                <div class="th thStatus">État de la livraison</div>
             </div>
             {% for order in orders %}
             {% if order.shippingStatus == "cancel"  %}
@@ -454,7 +454,7 @@
                 <div style="cursor: pointer;" onclick="showOrder('flex','orderCancel#{{order.id}}');" class="td tdProductsName" >{{order.products|slice(0,40)}}...</div>
                 <div style="cursor: pointer;" onclick="showOrder('flex','orderCancel#{{order.id}}');" class="td tdNumberProducts">{{productsNbr|length}}</div>
                 <div style="cursor: pointer;" onclick="showOrder('flex','orderCancel#{{order.id}}');" class="td tdTotal">{{order.total}} €</div>
-                <div class="td tdStatusCancel">Annulez</div>
+                <div class="td tdStatusCancel">Annuler</div>
                
             </div>
          

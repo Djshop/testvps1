@@ -4,7 +4,7 @@ function sweetAlertConnected() {
     
     swal({
       title: "Vous n'êtes pas connecté",
-      text: "Veuillez vous connecté a votre profil ou vous inscrire pour pouvoir effectué une commande",
+      text: "Veuillez vous connecter à votre profil ou vous inscrire pour pouvoir effectuer une commande",
       icon: "warning",
       button: "Connexion",
     })
@@ -19,7 +19,7 @@ function sweetAlertVerified() {
     
     swal({
       title: "Votre compte n'est pas vérifié",
-      text: "Veuillez accedez au mail qui vous a etais envoyé a l'inscription pour valider votre compte",
+      text: "Veuillez accéder au mail qui vous a été envoyé à l'inscription pour valider votre compte",
       icon: "warning",
       button: "Ok",
     })

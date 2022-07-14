@@ -15,7 +15,7 @@
 
 
                 <div id="userOrdersBtn" class="filterCard" onclick="userOrders()"><i class="fa-solid fa-list-check"></i>
-                    <p>Mes Commandes</p>
+                    <p>Mes commandes</p>
                 </div>
                 <div id="userRefundsBtn" class="filterCard" onclick="userRefunds()"><i
                         class="fa-solid fa-money-check-dollar"></i>
@@ -29,7 +29,7 @@
         <div class="filterContainerResponsive">
 
          <div id="userOrdersBtnResponsive" class="filterCardResponsive" onclick="userOrdersResponsive()"><i class="fa-solid fa-list-check"></i>
-                    <p>Mes Commandes</p>
+                    <p>Mes commandes</p>
                 </div>
                 <div id="userRefundsBtnResponsive" class="filterCardResponsive" onclick="userRefundsResponsive()"><i
                         class="fa-solid fa-money-check-dollar"></i>
@@ -48,14 +48,14 @@
             {% endfor %}
             {% if countWaiting == 0 %}
             <div class="emptyListUser">
-                <h1>Vous n'avez aucune commande </h1>
+                <h1>Vous n'avez aucune commande en cours </h1>
             </div>
             {% else %}
             <div class="itemsTh">
                 <div class="th thNumber">Numéro de commande</div>
-                <div class="th thNumberProducts">Nombre de Produit</div>
-                <div class="th thTotal">Prix Total</div>
-                <div class="th thStatus">Etats de la livraison</div>
+                <div class="th thNumberProducts">Quantité</div>
+                <div class="th thTotal">Prix total</div>
+                <div class="th thStatus">État de la commande</div>
                 <div class="th thStatus">Action</div>
             </div>
 
@@ -192,15 +192,15 @@
             {% if countRefund == 0 %}
 
             <div class="emptyListUser">
-                <h1>Vous n'avez aucune commande de remboursé</h1>
+                <h1>Vous n'avez aucune commande remboursée</h1>
             </div>
             {% else %}
 
             <div class="itemsTh">
                 <div class="th thNumber">Numéro de commande</div>
-                <div class="th thNumberProducts">Nombre de Produit</div>
-                <div class="th thTotal">Prix Total</div>
-                <div class="th thStatus">Etats du remboursement</div>
+                <div class="th thNumberProducts">Quantité</div>
+                <div class="th thTotal">Prix total</div>
+                <div class="th thStatus">État du remboursement</div>
             </div>
 
             {% for order in orders %}
@@ -234,7 +234,7 @@
                     {% if order.shippingStatus == 'refund'%}
                     En attente de remboursement
                     {% elseif order.shippingStatus == 'cancel'%}
-                    Remboursé
+                    Remboursée
                     {% endif %}
                 </div>
             </div>

@@ -14,14 +14,14 @@
 
 
                 <div id="allStockBtn" class="filterCard" onclick="allStockShow()"><i class="fa-solid fa-list-check"></i>
-                    <p>Toute les Console</p>
+                    <p>Toutes les consoles</p>
                 </div>
                 <div id="soldStockBtn" class="filterCard" onclick="soldStockShow()"><i
                         class="fa-solid fa-money-check-dollar"></i>
-                    <p>Console Vendu</p>
+                    <p>Consoles vendues</p>
                 </div>
                 <div id="toSellStockBtn" class="filterCard" onclick="toSellStockShow()"><i class="fa-solid fa-list"></i>
-                    <p>Console En Vente</p>
+                    <p>Consoles en vente</p>
                 </div>
             </div>
         </div>
@@ -32,14 +32,14 @@
 
 
             <div id="allStockBtnResponsive" class="filterCardResponsive" onclick="allStockShowResponsive()"><i class="fa-solid fa-list-check"></i>
-                <p>Toute les Console</p>
+                <p>Toutes les consoles</p>
             </div>
             <div id="soldStockBtnResponsive" class="filterCardResponsive" onclick="soldStockShowResponsive()"><i
                     class="fa-solid fa-money-check-dollar"></i>
-                <p>Console Vendu</p>
+                <p>Consoles vendues</p>
             </div>
             <div id="toSellStockBtnResponsive" class="filterCardResponsive" onclick="toSellStockShowResponsive()"><i class="fa-solid fa-list"></i>
-                <p>Console En Vente</p>
+                <p>Consoles en vente</p>
             </div>
         </div>
     </div>
@@ -52,11 +52,11 @@
                 <div class="th thTitle">Nom</div>
                 <div class="th thGeneration">Gen</div>
                 <div class="th thPrice">Prix</div>
-                <div class="th thSold">Status</div>
+                <div class="th thSold">Statut</div>
                 <div class="th thShow thNotResponsive"><i class="fa-solid fa-eye"></i></div>
                 <div class="th thEdit thNotResponsive"><i class="fa-solid fa-gear"></i></div>
                 <div class="th thDelete thNotResponsive"><i class="fa-solid fa-ban"></i></div>
-                <div class="th thEdit thResponsive">Action</div>
+                <div class="th thEdit thResponsive">Actions</div>
             </div>
             {% for xbox in xboxes %}
             {% set xbxPic = xbox.picture|split('_') %}
@@ -81,12 +81,12 @@
                     {% if xbox.sold == 'to sell'%}
                     <div class="btnSell"><i class="fa-solid fa-hourglass"></i>En vente</div>
                     {% elseif xbox.sold == 'SOLD'%}
-                    <div class="btnSell btnSold"><i class="fa-solid fa-check"></i>Vendu</div>
+                    <div class="btnSell btnSold"><i class="fa-solid fa-check"></i>Vendue</div>
                     {% endif %}
                 </div>
               
                 <a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="td btnShow btnNotResponsive tdNotResponsive"><i
-                            class="fa-solid fa-eye"></i>OUVRIR</a>
+                            class="fa-solid fa-eye"></i>VOIR</a>
                <a href="{{ path('app_xbox_edit', {'id': xbox.id}) }}" class="td btnShow btnEdit btnNotResponsive tdNotResponsive"><i
                             class="fa-solid fa-gear"></i>CONFIGURER</a>
                 <a class="td btnShow btnDelete btnNotResponsive tdNotResponsive" onclick="sweetAlertDeleteAll{{xbox.id}}()"><i
@@ -101,7 +101,7 @@
 
                             <div class="td tdResponsive">
                             <a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="td btnShow "><i
-                            class="fa-solid fa-eye"></i>OUVRIR</a>
+                            class="fa-solid fa-eye"></i>VOIR</a>
                             <a href="{{ path('app_xbox_edit', {'id': xbox.id}) }}" class="td btnShow btnEdit "><i
                             class="fa-solid fa-gear"></i>CONFIGURER</a>
                             <a class="td btnShow btnDelete " onclick="sweetAlertDeleteAll{{xbox.id}}()"><i
@@ -136,7 +136,7 @@
             {% endfor %}
             {% else %} 
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune console</h1>
+                <h1>Vous n'avez aucune consoles en vente</h1>
             </div>
             {% endif %}
 
@@ -146,7 +146,7 @@
             {% if xboxes is not empty %}
             {% if countSold == 0 %}
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune console de vendu</h1>
+                <h1>Vous n'avez aucune consoles vendues</h1>
             </div>
             {% else %}
             <div class="itemsTh">
@@ -154,11 +154,11 @@
                 <div class="th thTitle">Nom</div>
                 <div class="th thGeneration">Gen</div>
                 <div class="th thPrice">Prix</div>
-                <div class="th thSold">Status</div>
+                <div class="th thSold">Statut</div>
                 <div class="th thShow thNotResponsive"><i class="fa-solid fa-eye"></i></div>
                 <div class="th thEdit thNotResponsive"><i class="fa-solid fa-gear"></i></div>
                 <div class="th thDelete thNotResponsive"><i class="fa-solid fa-ban"></i></div>
-                <div class="th thEdit thResponsive">Action</div>
+                <div class="th thEdit thResponsive">Actions</div>
             </div>
             {% for xbox in xboxes %}
             {% if xbox.sold == 'SOLD' %}
@@ -182,12 +182,12 @@
                     {% if xbox.sold == 'to sell'%}
                     <div class="btnSell"><i class="fa-solid fa-hourglass"></i>En vente</div>
                     {% elseif xbox.sold == 'SOLD'%}
-                    <div class="btnSell btnSold"><i class="fa-solid fa-check"></i>Vendu</div>
+                    <div class="btnSell btnSold"><i class="fa-solid fa-check"></i>Vendue</div>
                     {% endif %}
                 </div>
            
                 <a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="td btnShow btnNotResponsive tdNotResponsive"><i
-                            class="fa-solid fa-eye"></i>OUVRIR</a>
+                            class="fa-solid fa-eye"></i>VOIR</a>
                 <a href="{{ path('app_xbox_edit', {'id': xbox.id}) }}" class="td btnShow btnEdit btnNotResponsive tdNotResponsive"><i
                             class="fa-solid fa-gear"></i>CONFIGURER</a>
                <a class="td btnShow btnDelete btnNotResponsive tdNotResponsive" onclick="sweetAlertDeleteSold{{xbox.id}}()"><i
@@ -202,7 +202,7 @@
 
                                     <div class="td tdResponsive">
                             <a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="td btnShow "><i
-                            class="fa-solid fa-eye"></i>OUVRIR</a>
+                            class="fa-solid fa-eye"></i>VOIR</a>
                             <a href="{{ path('app_xbox_edit', {'id': xbox.id}) }}" class="td btnShow btnEdit "><i
                             class="fa-solid fa-gear"></i>CONFIGURER</a>
                             <a class="td btnShow btnDelete " onclick="sweetAlertDeleteAll{{xbox.id}}()"><i
@@ -239,7 +239,7 @@
             {% endif %}
             {% else %} 
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune console de vendu</h1>
+                <h1>Vous n'avez aucune consoles vendues</h1>
             </div>
             {% endif %}
 
@@ -249,7 +249,7 @@
             {% if xboxes %}
             {% if countSell == 0 %}
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune console en vente</h1>
+                <h1>Vous n'avez aucune consoles en vente</h1>
             </div>
             {% else %}
             <div class="itemsTh">
@@ -261,7 +261,7 @@
                 <div class="th thShow thNotResponsive"><i class="fa-solid fa-eye"></i></div>
                 <div class="th thEdit thNotResponsive"><i class="fa-solid fa-gear"></i></div>
                 <div class="th thDelete thNotResponsive"><i class="fa-solid fa-ban"></i></div>
-                <div class="th thEdit thResponsive">Action</div>
+                <div class="th thEdit thResponsive">Actions</div>
             </div>
             {% for xbox in xboxes %}
             {% if xbox.sold == 'to sell' %}
@@ -287,12 +287,12 @@
                     {% if xbox.sold == 'to sell'%}
                     <div class="btnSell"><i class="fa-solid fa-hourglass"></i>En vente</div>
                     {% elseif xbox.sold == 'SOLD'%}
-                    <div class="btnSell btnSold"><i class="fa-solid fa-check"></i>Vendu</div>
+                    <div class="btnSell btnSold"><i class="fa-solid fa-check"></i>Vendue</div>
                     {% endif %}
                 </div>
            
                <a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="td btnShow btnNotResponsive tdNotResponsive"><i
-                            class="fa-solid fa-eye"></i>OUVRIR</a>
+                            class="fa-solid fa-eye"></i>VOIR</a>
                <a href="{{ path('app_xbox_edit', {'id': xbox.id}) }}" class="td btnShow btnEdit btnNotResponsive tdNotResponsive"><i
                             class="fa-solid fa-gear"></i>CONFIGURER</a>
                <a class="td btnShow btnDelete btnNotResponsive tdNotResponsive" onclick="sweetAlertDeleteToSell{{xbox.id}}()"><i
@@ -307,7 +307,7 @@
 
                                     <div class="td tdResponsive">
                             <a href="{{ path('app_xbox_show', {'id': xbox.id}) }}" class="td btnShow "><i
-                            class="fa-solid fa-eye"></i>OUVRIR</a>
+                            class="fa-solid fa-eye"></i>VOIR</a>
                             <a href="{{ path('app_xbox_edit', {'id': xbox.id}) }}" class="td btnShow btnEdit "><i
                             class="fa-solid fa-gear"></i>CONFIGURER</a>
                             <a class="td btnShow btnDelete " onclick="sweetAlertDeleteAll{{xbox.id}}()"><i
@@ -343,7 +343,7 @@
             {% endif %}
             {% else %} 
             <div class="emptyListAdmin">
-                <h1>Vous n'avez aucune console en vente</h1>
+                <h1>Vous n'avez aucune consoles en vente</h1>
             </div>
             {% endif %}
 

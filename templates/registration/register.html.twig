@@ -40,15 +40,15 @@
 						<input type="text" id="lastname" name="lastname">
 					</p>
 
-					<p class="text-left mt-4 mb-1">{{ form_label(registrationForm.email, 'Adresse Email') }}</p>
+					<p class="text-left mt-4 mb-1">{{ form_label(registrationForm.email, 'Adresse email') }}</p>
 					{{ form_widget(registrationForm.email) }}
 
 
-					<p class=" mt-4 mb-1">{{ form_label(registrationForm.plainPassword, 'Mot de Passe') }}</p>
+					<p class=" mt-4 mb-1">{{ form_label(registrationForm.plainPassword, 'Mot de passe') }}</p>
 					{{ form_widget(registrationForm.plainPassword) }}
 
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="confirm_password">Confirmation de mot de passe</label>
+						<label for="confirm_password">Confirmation du mot de passe</label>
 						<input type="password" id="confirm_password" name="confirm_password">
 					</p>
 
@@ -56,19 +56,19 @@
 				</div>
 				<div class="rightFormRegister">
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="phone">Numero de telephone</label>
+						<label for="phone">Numéro de téléphone</label>
 						<input type="phone" id="phone" name="phone">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="adress_one">Adress ligne 1</label>
+						<label for="adress_one">Adresse ligne 1</label>
 						<input type="text" id="adress_one" name="adress_one">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="adress_two">Adress ligne 2</label>
+						<label for="adress_two">Adresse ligne 2</label>
 						<input type="text" id="adress_two" name="adress_two">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="postal">Code Postal</label>
+						<label for="postal">Code postal</label>
 						<input type="text" id="postal" name="postal">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
@@ -82,7 +82,7 @@
 
 			<div class="btnRegister">
 				<button type="submit" class="btnConnexion">S'inscrire</button>
-				<a class="btnConnexion" href="{{ path('login')}}">Vous avez un compte ?</a>
+				<a class="btnConnexion" href="{{ path('login')}}">Vous avez déjà un compte ?</a>
 			</div>
 
 			{{ form_end(registrationForm) }}

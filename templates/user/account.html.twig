@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}DJ SHOP - Mon Profil
+{% block title %}DJ SHOP - Mon profil
 {% endblock %}
 {% block body %}
 	{% block javascripts %}
@@ -13,7 +13,7 @@
 
 		<div class="accountBody">
 			<div class="accountMenu">
-				<div class="menuChoice" id="accountChoice" onclick="account()">Mon Profil</div>
+				<div class="menuChoice" id="accountChoice" onclick="account()">Mon profil</div>
 				<div class="menuChoice" id="adressChoice" onclick="adress()">Mes coordonnées</div>
 				<div class="menuChoice" id="passwordChoice" onclick="password()">Sécurité</div>
 				{% if app.user.isVerified == 0 %}
@@ -37,7 +37,7 @@
 				</div>
 				<div class="contentAccount">
 					<div class="contentClass" id="userInfoAccount">
-						<div class="labelContent">Mes Informations</div>
+						<div class="labelContent">Mes informations</div>
 						<div class="userData">
 							<div class="dataLine">
 								<div class="labelData">Prénom</div>
@@ -60,7 +60,7 @@
 								<div class="outputData">{{ app.user.adress }}</div>
 							</div>
 							<div class="dataLine">
-								<div class="labelData">Code Postal</div>
+								<div class="labelData">Code postal</div>
 								<div class="outputData">{{ app.user.postal }}</div>
 							</div>
 							<div class="dataLine">
@@ -70,7 +70,7 @@
 						</div>
 					</div>
 					<form method="post" class=" contentClass" id="adressEditForm">
-						<div class="labelContent">Mes Coordonnées</div>
+						<div class="labelContent">Mes coordonnées</div>
 						<input type="hidden" name="editAdress" value="edited">
 						<div class="adressEditInput">
 							<div class="adressEditOne">
@@ -79,7 +79,7 @@
 									<input type="text" value="{{ app.user.adress }}" name="adress">
 								</div>
 								<div class="adressInput">
-									<p>Code Postal :</p>
+									<p>Code postal :</p>
 									<input type="text" name="postal" value="{{ app.user.postal }}">
 								</div>
 							</div>
@@ -96,7 +96,7 @@
 							</div>
 						</div>
 						<button type="submit" class="btnSubmitEdit" id="btnSumbitEdit">
-							Modifiez</button>
+							Modifier</button>
 
 
 					</form>
@@ -115,11 +115,11 @@
 								<input type="password" name="newPassword" id="newPassword">
 							</div>
 							<div class="inputEditPass">
-								<label for="confirmPassword">Confirmartion du mot de passe</label>
+								<label for="confirmPassword">Confirmation du mot de passe</label>
 								<input type="password" name="confirmPassword" id="confirmPassword">
 							</div>
 							<button type="submit" id="btnEditPass" class="btnSubmitEdit">
-								Modifiez</button>
+								Modifier</button>
 						</div>
 
 
@@ -127,12 +127,12 @@
 					<div class="contentClass" id="verifiedForm">
 						<div class="labelContent">Vérification du compte</div>
 						<div class="notVerified">
-							<p>Votre comptes n'a toujours pas étais vérifié, pour effectuer des commande vous devez impérativement avoir cliquez sur le lien envoyé par mail pour permettre la verification de votre compte.</p>
-							<p>Un premier mail vous a étais envoyé au moment de cette inscription mais le lien expire au bout d'1 heures pour des raison de sécurité, vous pouvez a tout moment recevoir un nouveau lien de verification en cliquant ci-dessous.</p>
+							<p>Votre compte n'a toujours pas été vérifié. Pour effectuer des commandes vous devez impérativement avoir cliqué sur le lien envoyé par mail pour permettre la vérification de votre compte.</p>
+							<p>Un premier mail vous a été envoyé au moment de cette inscription. Pensez à vérifier vos courriers indésirables. Pour des raisons de sécurité, le lien expire au bout d'1 heure. Vous pouvez à tout moment recevoir un nouveau lien de vérification en cliquant ci-dessous.</p>
 
 							<form method="post" class="notVerifiedForm">
 								<input type="hidden" name="resendVerified" value="resendVerified">
-								<button type="submit" class="btnResendVerified">Renvoyez le mail de confirmation</button>
+								<button type="submit" class="btnResendVerified">Renvoyer le mail de confirmation</button>
 							</form>
 						</div>
 
@@ -145,135 +145,6 @@
 	</div>
 
 
-	{# <div class="container containerAccount">
-									<h1 class="accountName">Profil de
-										{{app.user.firstname}}
-										{{app.user.lastname}}
-									</h1>
-									<div class="showErrors showErrorsAccount">
-										{% for level, messages in app.flashes %}
-											{% for message in messages %}
-												<div class="alert text-center col-6 alert-{{ level }}">
-													{{ message|raw }}
-												</div>
-											{% endfor %}
-										{% endfor %}
-									</div>
-									{% if app.user.isVerified == 0 %}
-										<div class="notVerified">
-											<p>Votre comptes n'a toujours pas étais vérifié, pour effectuer des commande vous devez impérativement avoir cliquez sur le lien envoyé par mail pour permettre la verification de votre compte.</p>
-											<p>Un premier mail vous a étais envoyé au moment de cette inscription mais le lien expire au bout d'1 heures pour des raison de sécurité, vous pouvez a tout moment recevoir un nouveau lien de verification en cliquant ci-dessous.</p>
-							
-											<form method="post">
-												<input type="hidden" name="resendVerified" value="resendVerified">
-												<button type="submit" class="btnResendVerified">Renvoyez le mail de confirmation</button>
-											</form>
-										</div>
-									{% endif %}
-									<div class="editAccount">
-							
-										<form method="post" class="adressEdit" id="adressEditForm">
-											<input type="hidden" name="editAdress" value="edited">
-											<div class="editContainer">
-												<div class="selectEdit">
-													<span id="spanInfo">Mes Informations</span>
-													<div id="btnEditAccount" onclick="editAccount()">
-														<i class="fa-solid fa-gear"></i>CONFIGURER
-													</div>
-													<div id="btnCancelEdit" onclick="editClose()">ANNULER</div>
-												</div>
-												<div id="showAdress">
-													<div class="adressShow">
-														<p>Adresse :</p>
-														<span>{{ app.user.adress }}</span>
-													</div>
-													<div class="adressShow">
-														<p>Code Postal :</p>
-														<span>{{ app.user.postal }}</span>
-													</div>
-													<div class="adressShow">
-														<p>Ville :</p>
-														<span>{{ app.user.city }}</span>
-													</div>
-													<div class="adressShow">
-														<p>Téléphone :</p>
-														<span>{{ app.user.phone }}</span>
-													</div>
-												</div>
-												<div id="editAdress">
-													<div class="adressEditInput">
-														<div class="adressEditOne">
-															<div class="adressInput">
-																<p>Adresse :</p>
-																<input type="text" value="{{ app.user.adress }}" name="adress">
-															</div>
-															<div class="adressInput">
-																<p>Code Postal :</p>
-																<input type="text" name="postal" value="{{ app.user.postal }}">
-															</div>
-							
-														</div>
-														<div class="adressEditTwo">
-							
-															<div class="adressInput">
-																<p>Ville :</p>
-																<input type="text" name="city" value="{{ app.user.city }}">
-															</div>
-															<div class="adressInput">
-																<p>Téléphone :</p>
-																<input type="text" name="phone" value="{{ app.user.phone }}">
-															</div>
-														</div>
-													</div>
-													<button type="submit" class="btnSubmitEdit" id="btnSumbitEdit">
-														Modifiez</button>
-							
-												</div>
-											</div>
-							
-										</form>
-							
-							
-										<form method="post" class="passwordEdit">
-											<input type="hidden" name="editPassword" value="edited">
-											<div class="passwordContainer">
-												<div class="selectEdit">
-													<span id="spanInfo">Modifiez mon mot de passe</span>
-												</div>
-												<div class="changePassword">
-													<div class="paramPassword">
-														<p>Votre mot de passe doit contenir au moins :</p>
-														<ul>
-															<li>8 caracteres</li>
-															<li>1 majuscule</li>
-															<li>1 chiffres</li>
-														</ul>
-													</div>
-							
-													<div class="editPassForm">
-														<div class="inputEditPass">
-															<label for="oldPassword">Votre mot de passe actuel</label>
-															<input type="password" name="oldPassword" id="oldPassword">
-														</div>
-														<div class="inputEditPass">
-															<label for="newPassword">Nouveau mot de passe</label>
-															<input type="password" name="newPassword" id="newPassword">
-														</div>
-														<div class="inputEditPass">
-															<label for="confirmPassword">Confirmartion du mot de passe</label>
-															<input type="password" name="confirmPassword" id="confirmPassword">
-														</div>
-														<button type="submit" id="btnEditPass" class="btnSubmitEdit">
-															Modifiez</button>
-													</div>
-												</div>
-							
-											</div>
-							
-							
-										</form>
-									</div>
-								</div> #}
-
+	
 
 {% endblock %}

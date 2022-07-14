@@ -97,7 +97,7 @@
 
 
                     <button onclick="addSuivi('block','{{order.id}}');" class="suiviBtn suiviBtnSuivi">N° Suivi</button>
-                    <button onclick="addRefund('block','refund{{order.id}}');" class="suiviBtn suiviBtnCancel">Annulez</button>
+                    <button onclick="addRefund('block','refund{{order.id}}');" class="suiviBtn suiviBtnCancel">Annuler</button>
                     <script>
                         var addSuivi = function (value, object) {
                             document.getElementById(object).style.display = value;
@@ -454,7 +454,7 @@
                 <div style="cursor: pointer;" onclick="showOrder('flex','orderCancel#{{order.id}}');" class="td tdProductsName" >{{order.products|slice(0,40)}}...</div>
                 <div style="cursor: pointer;" onclick="showOrder('flex','orderCancel#{{order.id}}');" class="td tdNumberProducts">{{productsNbr|length}}</div>
                 <div style="cursor: pointer;" onclick="showOrder('flex','orderCancel#{{order.id}}');" class="td tdTotal">{{order.total}} €</div>
-                <div class="td tdStatusCancel">Annuler</div>
+                <div class="td tdStatusCancel">Annulée</div>
                
             </div>
          

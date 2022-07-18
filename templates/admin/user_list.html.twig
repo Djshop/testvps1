@@ -95,11 +95,11 @@
 									<form method="POST" id="form{{ user.id }}">
 										<input type="hidden" name="changeToAdmin" value="{{ user.id }}">
 									</form>
-                                    		<button onclick="sweetAlertRoleAdmin{{ xbox.id }}({{ xbox.id }})"  class="btnUpAdmin">
+                                    		<button onclick="sweetAlertRoleAdmin{{ user.id }}({{ user.id }})"  class="btnUpAdmin">
 											<i class="fa-solid fa-person-arrow-up-from-line"></i>
 											Changez de role</button>
                                         <script>
-											function sweetAlertRoleAdmin{{ xbox.id }}(id) {
+											function sweetAlertRoleAdmin{{ user.id }}(id) {
 
 
                                                 swal({
@@ -132,10 +132,10 @@
 										<form method="POST" id="form{{ user.id }}">
 											<input type="hidden" name="changeToUser" value="{{ user.id }}">
 										</form>
-                                        	<button onclick="sweetAlertRoleUser{{ xbox.id }}({{ xbox.id }})"   class="btnDownUser">
+                                        	<button onclick="sweetAlertRoleUser{{ user.id }}({{ user.id }})"   class="btnDownUser">
 												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
                                         <script>
-											function sweetAlertRoleUser {{ xbox.id }}(id) {
+											function sweetAlertRoleUser {{ user.id }}(id) {
                                                 swal({
                                                     title: "Êtes-vous sûr ?",
                                                     text: "Cet utilisateur va perdre ses droit admins et n'aura accées qu'au fonctionnalité client",
@@ -215,7 +215,7 @@
                                         	<button onclick="sweetAlertRoleUserAdmin{{ user.id }}({{ user.id }})"  class="btnDownUser">
 												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
 										<script>
-											function sweetAlertRoleUserAdmin{{ xbox.id }}(id) {
+											function sweetAlertRoleUserAdmin{{ user.id }}(id) {
                                                 swal({
                                                     title: "Êtes-vous sûr ?",
                                                     text: "Cet utilisateur va perdre ses droit admins et n'aura accées qu'au fonctionnalité client",
@@ -300,7 +300,7 @@
 												Changez de role</button>
 										</td>
 										<script>
-											function sweetAlertRoleAdminUser{{ xbox.id }}(id) {
+											function sweetAlertRoleAdminUser{{ user.id }}(id) {
 
 
                                                 swal({

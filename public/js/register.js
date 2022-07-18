@@ -1,7 +1,8 @@
 function passwordRequirements() {
    
 
-    document.getElementById("passwordRequirements").style.display = "flex" ;
+  
+    document.getElementById("passwordFormOne").addEventListener('click', function (){  document.getElementById("passwordRequirements").style.display = "flex" });
 
  
     

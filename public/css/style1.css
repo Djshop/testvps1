@@ -999,6 +999,13 @@ footer .legal {
 #passwordRequirements{
     display: none;
 }
+#passwordRequirements small{
+    margin-bottom: -10px;
+    text-align: left;
+}
+#passwordRequirements small li{
+color: #f66B0E;
+}
 /*  End  Registration --------------------------------------------------------------------------------------------------------------------*/
 
 

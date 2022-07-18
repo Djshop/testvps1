@@ -9891,6 +9891,11 @@ select option:hover {
         width: 210px;
         max-height: 180px;
     }
+    
+    .btnAddCart {
+    font-size: 40px;
+    border-radius: 10px;
+    }
 
 
     /* ------------------- Fin Show ------------------- */

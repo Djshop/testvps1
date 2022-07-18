@@ -157,10 +157,14 @@
 										</script>
 									{% else %}
 
-										<button class="btnCantAdmin" data-bs-toggle="tooltip" data-bs-placement="top" title="Etant le dernier Admin veuillez passer un autre compte client en Admin avant de pouvoir changez le role de celui-ci">
-											<i class="fa-solid fa-person-arrow-down-to-line"></i>
-											Client
-										</button>
+										<button onclick="sweetAlertCantRole()"   class="btnDownUser">
+												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
+                                                <script>
+                                                function sweetAlertCantRole() {
+                                                    swal("Action Impossible", "Vous ne pouvez faire passer le role de ce compte en client sachant qu'il s'agit du dernier compte Admin. Veuillez attribuer les droits d'admin a un autre compte si vous souhaitez passer le rôle de ce compte en client");
+
+                                                }
+                                                </script>
 									{% endif %}
 								</td>
 
@@ -237,10 +241,14 @@
 										</script>
 									{% else %}
 
-										<button class="btnCantAdmin" data-bs-toggle="tooltip" data-bs-placement="top" title="Etant le dernier Admin veuillez passer un autre compte client en Admin avant de pouvoir changez le role de celui-ci">
-											<i class="fa-solid fa-person-arrow-down-to-line"></i>
-											Changez de role
-										</button>
+												<button onclick="sweetAlertCantRole()"   class="btnDownUser">
+												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
+                                                <script>
+                                                function sweetAlertCantRole() {
+                                                    swal("Action Impossible", "Vous ne pouvez faire passer le role de ce compte en client sachant qu'il s'agit du dernier compte Admin. Veuillez attribuer les droits d'admin a un autre compte si vous souhaitez passer le rôle de ce compte en client");
+
+                                                }
+                                                </script>
 									{% endif %}
 								</td>
 

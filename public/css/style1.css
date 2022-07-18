@@ -996,7 +996,7 @@ footer .legal {
     margin-left: 100px;
 }
 
-.passwordRequirements{
+#passwordRequirements{
     display: none;
 }
 /*  End  Registration --------------------------------------------------------------------------------------------------------------------*/

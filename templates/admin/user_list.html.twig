@@ -174,11 +174,19 @@
                         <td>{{user.adress}}</td>
                         <td>Client</td>
                         <td>
-                            <form method="POST">
+                            <form method="POST" id="form{{ user.id }}" class="formSubmitRole">
                                 <input type="hidden" name="changeToAdmin" value="{{ user.id }}">
-                                <button type="submit" class="btnUpAdmin"><i class="fa-solid fa-person-arrow-up-from-line"></i> Admin</button>
                             </form>
+                            <button class="btnUpAdmin" onclick="formSubmitRole({{ user.id }})"><i class="fa-solid fa-person-arrow-up-from-line"></i> Changez de role</button>
                         </td>
+                        <script>
+                        function formSubmitRole(id){
+                            let formId ="form";
+                            formId += id;
+                            console.log(formId)
+                        
+                        }
+                        </script>
 
                     </tr>
                     {% endif %}

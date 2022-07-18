@@ -6,12 +6,12 @@
 {% block body %}
 
 
-
 	<div class="container registerCard">
 
 		<form method="POST" class="formInputRegister">
 			<div class="headLogin">
 				<p>Bienvenue sur Dj Shop</p>
+				<small>Inscrivez-vous</small>
 
 			</div>
 
@@ -45,6 +45,16 @@
 					<p class="text-left mt-4 mb-1">{{ form_label(registrationForm.email, 'Adresse email *') }}</p>
 					{{ form_widget(registrationForm.email) }}
 
+
+					<p class=" mt-4 mb-1" id="passwordFormOne">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
+					{{ form_widget(registrationForm.plainPassword) }}
+
+
+					<p class="text-left mt-4 mb-1 keyFlex">
+						<label for="confirm_password">Confirmation du mot de passe *</label>
+						<input type="password" id="confirm_password" name="confirm_password">
+					</p>
+
 					<div class="text-left mt-4 keyFlex " id="passwordRequirements">
 						<small>Votre mot de passe doit contenir au moins
 							<ul>
@@ -54,16 +64,8 @@
 							</ul>
 						</small>
 					</div>
-
-					<p class=" mt-4 mb-1" id="passwordFormOne">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
-					{{ form_widget(registrationForm.plainPassword) }}
-				
-
-					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="confirm_password">Confirmation du mot de passe *</label>
-						<input type="password" id="confirm_password" name="confirm_password">
-					</p>
-						<script>
+					{# Js pour affiché les exigences pour le mdp #}
+					<script>
 						document.getElementById("registration_form_plainPassword").addEventListener('click', function () {
 						document.getElementById("passwordRequirements").style.display = "flex"
 						});

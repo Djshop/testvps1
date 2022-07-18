@@ -4,6 +4,10 @@
 {% endblock %}
 
 {% block body %}
+{% block javascripts %}
+<script src="{{ asset('js/register.js')}}"></script>
+
+{% endblock %}
 
 
 	<div class="container registerCard">
@@ -13,15 +17,7 @@
 				<p>Bienvenue sur Dj Shop</p>
 			
 			</div>
-			<div class="headLogin passwordRequirements">
-				<small>Votre mot de passe doit contenir au moins 
-				<ul>
-				<li>8 caractères minimum</li>
-				<li>1 caractère majuscule</li>
-				<li>1 chiffre</li>
-				</ul>
-				</small>
-			</div>
+		
 
 			<div class="errors">
 				{% for flashError in app.flashes('verify_email_error') %}
@@ -52,8 +48,17 @@
 					<p class="text-left mt-4 mb-1">{{ form_label(registrationForm.email, 'Adresse email *') }}</p>
 					{{ form_widget(registrationForm.email) }}
 
+						<div class="text-left mt-4 mb-1 keyFlex passwordRequirements">
+							<small>Votre mot de passe doit contenir au moins 
+							<ul>
+							<li>8 caractères minimum</li>
+							<li>1 caractère majuscule</li>
+							<li>1 chiffre</li>
+							</ul>
+							</small>
+						</div>
 
-					<p class=" mt-4 mb-1">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
+					<p class=" mt-4 mb-1" onclick="passwordRequirements()">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
 					{{ form_widget(registrationForm.plainPassword) }}
 
 					<p class="text-left mt-4 mb-1 keyFlex">

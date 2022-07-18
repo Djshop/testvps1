@@ -61,7 +61,7 @@
 					<p class=" mt-4 mb-1" id="passwordFormOne">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
 					{{ form_widget(registrationForm.plainPassword) }}
 					<script>
-						document.getElementById("passwordFormOne").addEventListener('click', function () {
+						document.getElementById("registration_form_plainPassword").addEventListener('click', function () {
 						document.getElementById("passwordRequirements").style.display = "flex"
 						});
 					</script>

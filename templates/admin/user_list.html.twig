@@ -1,208 +1,336 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}DJ SHOP - Utilisateurs{% endblock %}
-
-{% block body %}
-{% block javascripts %}
-<script src="{{ asset('js/users.js')}}"></script>
+{% block title %}DJ SHOP - Utilisateurs
 {% endblock %}
 
-<div class="containListUser">
+{% block body %}
+	{% block javascripts %}
+		<script src="{{ asset('js/users.js')}}"></script>
+	{% endblock %}
+
+	<div class="containListUser">
 
 
-    <div class="containerDashboard">
-    <div class="dashUserFilter">
-       <h1 class="h1TitleStock " style="padding-top: 50px;">Utilisateurs</h1>
-        <div class="filterContainer">
+		<div class="containerDashboard">
+			<div class="dashUserFilter">
+				<h1 class="h1TitleStock " style="padding-top: 50px;">Utilisateurs</h1>
+				<div class="filterContainer">
 
 
-            <div id="allUsersBtn" class="filterCard" onclick="allUsersShow()"><i class="fa-solid fa-users"></i>
-                <p>Tous les utilisateurs</p>
-            </div>
-            <div id="adminUsersBtn" class="filterCard" onclick="adminUsersShow()"><i class="fa-solid fa-user-gear"></i>
-                <p>Admin</p>
-            </div>
-            <div id="userUsersBtn" class="filterCard" onclick="userUsersShow()"><i class="fa-solid fa-user-astronaut"></i>
-                <p>Clients</p>
-            </div>
-        </div>
-    </div>
-    </div>
+					<div id="allUsersBtn" class="filterCard" onclick="allUsersShow()">
+						<i class="fa-solid fa-users"></i>
+						<p>Tous les utilisateurs</p>
+					</div>
+					<div id="adminUsersBtn" class="filterCard" onclick="adminUsersShow()">
+						<i class="fa-solid fa-user-gear"></i>
+						<p>Admin</p>
+					</div>
+					<div id="userUsersBtn" class="filterCard" onclick="userUsersShow()">
+						<i class="fa-solid fa-user-astronaut"></i>
+						<p>Clients</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-      <div class="containerDashboardResponsive">
-        <h1 class="h1TitleResponsive" >Utilisateurs</h1>
-        <div class="filterContainerResponsive">
-
-
-            <div id="allUsersBtnResponsive" class="filterCardResponsive" onclick="allUsersShowResponsive()"><i class="fa-solid fa-users"></i>
-                <p>Tous les utilisateurs</p>
-            </div>
-            <div id="adminUsersBtnResponsive" class="filterCardResponsive" onclick="adminUsersShowResponsive()"><i class="fa-solid fa-user-gear"></i>
-                <p>Admin</p>
-            </div>
-            <div id="userUsersBtnResponsive" class="filterCardResponsive" onclick="userUsersShowResponsive()"><i class="fa-solid fa-user-astronaut"></i>
-                <p>Clients</p>
-            </div>
-        </div>
-    </div>
-    <div class="container containerTableList">
-    
-        <table class="table" id="allUsersTable">
-            <thead>
-                <tr>
-                    <th scope="col"><i class="fa-solid fa-at"></i></th>
-                    <th scope="col"><i class="fa-solid fa-file-signature"></i></th>
-                    <th scope="col"><i class="fa-solid fa-phone-flip"></i></th>
-                    <th scope="col"><i class="fa-solid fa-location-arrow"></i></th>
-                    <th scope="col"><i class="fa-solid fa-user-doctor"></i></th>
-                    <th scope="col"><i class="fa-solid fa-gear"></i></th>
-
-                </tr>
-            </thead>
-            <tbody>
-                {% for user in users %}
-
-                <tr>
-                    <td>{{user.email}}</td>
-                    <td>{{user.firstname}} {{user.lastname}}</td>
-                    <td>{{user.phone}}</td>
-                    <td>{{user.adress}}</td>
-
-                    {# Condition pour transformer la chaine de caractere ex: ROLE_USER => Client #}
-                    {% if user.roles.0 == 'ROLE_USER' %}
-                    <td>Client</td>
-                    <td>
-                        <form method="POST">
-                            <input type="hidden" name="changeToAdmin" value="{{ user.id }}">
-                            <button type="submit" class="btnUpAdmin"><i class="fa-solid fa-person-arrow-up-from-line"></i> Admin</button>
-                        </form>
-                    </td>
-
-                    {% elseif user.roles.0 == 'ROLE_ADMIN' %}
-
-                    <td>Admin</td>
-                    <td>
-                        {% if countAdmins > 1 %}
-                        <form method="POST">
-                            <input type="hidden" name="changeToUser" value="{{ user.id }}">
-                            <button type="submit" class="btnDownUser"><i class="fa-solid fa-person-arrow-down-to-line"></i>Client</button>
-                        </form>
-                        {% else %}
-        
-                        <button class="btnCantAdmin" data-bs-toggle="tooltip" data-bs-placement="top" title="Etant le dernier Admin veuillez passer un autre compte client en Admin avant de pouvoir changez le role de celui-ci">
-                            <i class="fa-solid fa-person-arrow-down-to-line"></i> Client
-                          </button>
-                        {% endif %}
-                    </td>
-
-                    {% endif %}
+		<div class="containerDashboardResponsive">
+			<h1 class="h1TitleResponsive">Utilisateurs</h1>
+			<div class="filterContainerResponsive">
 
 
+				<div id="allUsersBtnResponsive" class="filterCardResponsive" onclick="allUsersShowResponsive()">
+					<i class="fa-solid fa-users"></i>
+					<p>Tous les utilisateurs</p>
+				</div>
+				<div id="adminUsersBtnResponsive" class="filterCardResponsive" onclick="adminUsersShowResponsive()">
+					<i class="fa-solid fa-user-gear"></i>
+					<p>Admin</p>
+				</div>
+				<div id="userUsersBtnResponsive" class="filterCardResponsive" onclick="userUsersShowResponsive()">
+					<i class="fa-solid fa-user-astronaut"></i>
+					<p>Clients</p>
+				</div>
+			</div>
+		</div>
+		<div class="container containerTableList">
 
-                </tr>
+			<table class="table" id="allUsersTable">
+				<thead>
+					<tr>
+						<th scope="col">
+							<i class="fa-solid fa-at"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-file-signature"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-phone-flip"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-location-arrow"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-user-doctor"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-gear"></i>
+						</th>
 
-                {% endfor %}
-            </tbody>
-        </table>
-        <table class="table" id="adminUsersTable">
-            <thead>
-                <tr>
-                    <th scope="col"><i class="fa-solid fa-at"></i></th>
-                    <th scope="col"><i class="fa-solid fa-file-signature"></i></th>
-                    <th scope="col"><i class="fa-solid fa-phone-flip"></i></th>
-                    <th scope="col"><i class="fa-solid fa-location-arrow"></i></th>
-                    <th scope="col"><i class="fa-solid fa-user-doctor"></i></th>
-                    <th scope="col"><i class="fa-solid fa-gear"></i></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for user in users %}
 
-                </tr>
-            </thead>
-            <tbody>
-                {% for user in users %}
-                {% if user.roles.0 == 'ROLE_ADMIN' %}
+						<tr>
+							<td>{{user.email}}</td>
+							<td>{{user.firstname}}
+								{{user.lastname}}</td>
+							<td>{{user.phone}}</td>
+							<td>{{user.adress}}</td>
 
-                <tr>
-                    <td>{{user.email}}</td>
-                    <td>{{user.firstname}} {{user.lastname}}</td>
-                    <td>{{user.phone}}</td>
-                    <td>{{user.adress}}</td>
-                    <td>Admin</td>
-                    <td>
-                        {% if countAdmins > 1 %}
-                        <form method="POST">
-                            <input type="hidden" name="changeToUser" value="{{ user.id }}">
-                            <button type="submit" class="btnDownUser"><i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
-                        </form>
-                        {% else %}
-        
-                        <button class="btnCantAdmin" data-bs-toggle="tooltip" data-bs-placement="top" title="Etant le dernier Admin veuillez passer un autre compte client en Admin avant de pouvoir changez le role de celui-ci">
-                            <i class="fa-solid fa-person-arrow-down-to-line"></i> Changez de role
-                          </button>
-                        {% endif %}
-                    </td>
+							{# Condition pour transformer la chaine de caractere ex: ROLE_USER => Client #}
+							{% if user.roles.0 == 'ROLE_USER' %}
+								<td>Client</td>
+								<td>
+									<form method="POST" id="form{{ user.id }}">
+										<input type="hidden" name="changeToAdmin" value="{{ user.id }}">
+									</form>
+                                    		<button onclick="sweetAlertRoleAdmin{{ xbox.id }}({{ xbox.id }})"  class="btnUpAdmin">
+											<i class="fa-solid fa-person-arrow-up-from-line"></i>
+											Changez de role</button>
+                                        <script>
+											function sweetAlertRoleAdmin{{ xbox.id }}(id) {
 
-                </tr>
 
-                {% endif %}
-                {% endfor %}
-            </tbody>
-        </table>
-        <div id="userUsersTable">
-            {% if countUsers == 0 %}
-            <div class="emptyUsersList">
-                <h1>Il n'y a pas encore de compte client </h1>
-            </div>
-            {% else %}
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col"><i class="fa-solid fa-at"></i></th>
-                        <th scope="col"><i class="fa-solid fa-file-signature"></i></th>
-                        <th scope="col"><i class="fa-solid fa-phone-flip"></i></th>
-                        <th scope="col"><i class="fa-solid fa-location-arrow"></i></th>
-                        <th scope="col"><i class="fa-solid fa-user-doctor"></i></th>
-                        <th scope="col"><i class="fa-solid fa-gear"></i></th>
+                                                swal({
+                                                    title: "Êtes-vous sûr ?",
+                                                    text: "Cet utilisateur est sur le point d'avoir les mêmes droits qu'un admin",
+                                                    icon: "warning",
+                                                    buttons: true,
+                                                    dangerMode: true
+                                                    }).then((willDelete) => {
+                                                    if (willDelete) {
+                                                    let formId = "form";
+                                                    formId += id;
+                                                    document.forms[formId].submit();
+                                                    swal("Le rôle a bien étais modifié", {icon: "success"});
+                                                    } else {
+                                                    swal("Chnagement de rôle annulez");
+                                                    }
+                                                });
 
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for user in users %}
-                    {% if user.roles.0 == 'ROLE_USER' %}
-                    <tr>
-                        <td>{{user.email}}</td>
-                        <td>{{user.firstname}} {{user.lastname}}</td>
-                        <td>{{user.phone}}</td>
-                        <td>{{user.adress}}</td>
-                        <td>Client</td>
-                        <td>
-                            <form method="POST" id="form{{ user.id }}" class="formSubmitRole">
-                                <input type="hidden" name="changeToAdmin" value="{{ user.id }}">
-                            </form>
-                            <button class="btnUpAdmin" onclick="formSubmitRole({{ user.id }})"><i class="fa-solid fa-person-arrow-up-from-line"></i> Changez de role</button>
-                        </td>
-                        <script>
-                        function formSubmitRole(id){
-                            let formId ="form";
-                            formId += id;
-                            console.log(formId)
-                            document.forms[formId].submit();
-                        
-                        }
-                        </script>
+                                            }
+										</script>
+								</td>
 
-                    </tr>
-                    {% endif %}
-                    {% endfor %}
-                </tbody>
-            </table>
-            {% endif %}
-        </div>
-    </div>
-</div>
+							{% elseif user.roles.0 == 'ROLE_ADMIN' %}
 
-{% for user in users %}
+								<td>Admin</td>
+								<td>
+									{% if countAdmins > 1 %}
+										<form method="POST" id="form{{ user.id }}">
+											<input type="hidden" name="changeToUser" value="{{ user.id }}">
+										</form>
+                                        	<button onclick="sweetAlertRoleUser{{ xbox.id }}({{ xbox.id }})"   class="btnDownUser">
+												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
+                                        <script>
+											function sweetAlertRoleUser {{ xbox.id }}(id) {
+                                                swal({
+                                                    title: "Êtes-vous sûr ?",
+                                                    text: "Cet utilisateur va perdre ses droit admins et n'aura accées qu'au fonctionnalité client",
+                                                    icon: "warning",
+                                                    buttons: true,
+                                                    dangerMode: true
+                                                    }).then((willDelete) => {
+                                                    if (willDelete) {
+                                                    let formId = "form";
+                                                    formId += id;
+                                                    document.forms[formId].submit();
+                                                    swal("Le rôle a bien étais modifié", {icon: "success"});
+                                                    } else {
+                                                    swal("Chnagement de rôle annulez");
+                                                    }
+                                                });
+                                            }
+										</script>
+									{% else %}
 
-{% endfor %}
+										<button class="btnCantAdmin" data-bs-toggle="tooltip" data-bs-placement="top" title="Etant le dernier Admin veuillez passer un autre compte client en Admin avant de pouvoir changez le role de celui-ci">
+											<i class="fa-solid fa-person-arrow-down-to-line"></i>
+											Client
+										</button>
+									{% endif %}
+								</td>
 
+							{% endif %}
+
+
+						</tr>
+
+					{% endfor %}
+				</tbody>
+			</table>
+			<table class="table" id="adminUsersTable">
+				<thead>
+					<tr>
+						<th scope="col">
+							<i class="fa-solid fa-at"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-file-signature"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-phone-flip"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-location-arrow"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-user-doctor"></i>
+						</th>
+						<th scope="col">
+							<i class="fa-solid fa-gear"></i>
+						</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					{% for user in users %}
+						{% if user.roles.0 == 'ROLE_ADMIN' %}
+
+							<tr>
+								<td>{{user.email}}</td>
+								<td>{{user.firstname}}
+									{{user.lastname}}</td>
+								<td>{{user.phone}}</td>
+								<td>{{user.adress}}</td>
+								<td>Admin</td>
+								<td>
+									{% if countAdmins > 1 %}
+										<form method="POST" id="form{{ user.id }}">
+											<input type="hidden" name="changeToUser" value="{{ user.id }}">
+										</form>
+                                        	<button onclick="sweetAlertRoleUser{{ user.id }}({{ user.id }})"  class="btnDownUser">
+												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
+										<script>
+											function sweetAlertRoleUser {{ xbox.id }}(id) {
+                                                swal({
+                                                    title: "Êtes-vous sûr ?",
+                                                    text: "Cet utilisateur va perdre ses droit admins et n'aura accées qu'au fonctionnalité client",
+                                                    icon: "warning",
+                                                    buttons: true,
+                                                    dangerMode: true
+                                                    }).then((willDelete) => {
+                                                    if (willDelete) {
+                                                    let formId = "form";
+                                                    formId += id;
+                                                    document.forms[formId].submit();
+                                                    swal("Le rôle a bien étais modifié", {icon: "success"});
+                                                    } else {
+                                                    swal("Chnagement de rôle annulez");
+                                                    }
+                                                });
+                                            }
+										</script>
+									{% else %}
+
+										<button class="btnCantAdmin" data-bs-toggle="tooltip" data-bs-placement="top" title="Etant le dernier Admin veuillez passer un autre compte client en Admin avant de pouvoir changez le role de celui-ci">
+											<i class="fa-solid fa-person-arrow-down-to-line"></i>
+											Changez de role
+										</button>
+									{% endif %}
+								</td>
+
+							</tr>
+
+						{% endif %}
+					{% endfor %}
+				</tbody>
+			</table>
+			<div id="userUsersTable">
+				{% if countUsers == 0 %}
+					<div class="emptyUsersList">
+						<h1>Il n'y a pas encore de compte client
+						</h1>
+					</div>
+				{% else %}
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">
+									<i class="fa-solid fa-at"></i>
+								</th>
+								<th scope="col">
+									<i class="fa-solid fa-file-signature"></i>
+								</th>
+								<th scope="col">
+									<i class="fa-solid fa-phone-flip"></i>
+								</th>
+								<th scope="col">
+									<i class="fa-solid fa-location-arrow"></i>
+								</th>
+								<th scope="col">
+									<i class="fa-solid fa-user-doctor"></i>
+								</th>
+								<th scope="col">
+									<i class="fa-solid fa-gear"></i>
+								</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							{% for user in users %}
+								{% if user.roles.0 == 'ROLE_USER' %}
+									<tr>
+										<td>{{user.email}}</td>
+										<td>{{user.firstname}}
+											{{user.lastname}}</td>
+										<td>{{user.phone}}</td>
+										<td>{{user.adress}}</td>
+										<td>Client</td>
+										<td>
+											<form method="POST" id="form{{ user.id }}" class="formSubmitRole">
+												<input type="hidden" name="changeToAdmin" value="{{ user.id }}">
+											</form>
+											<button class="btnUpAdmin" onclick="sweetAlertRoleAdmin{{ user.id }}({{ user.id }})">
+												<i class="fa-solid fa-person-arrow-up-from-line"></i>
+												Changez de role</button>
+										</td>
+										<script>
+											function sweetAlertRoleAdmin {{ xbox.id }}(id) {
+
+
+                                                swal({
+                                                    title: "Êtes-vous sûr ?",
+                                                    text: "Cet utilisateur est sur le point d'avoir les mêmes droits qu'un admin",
+                                                    icon: "warning",
+                                                    buttons: true,
+                                                    dangerMode: true
+                                                    }).then((willDelete) => {
+                                                    if (willDelete) {
+                                                    let formId = "form";
+                                                    formId += id;
+                                                    document.forms[formId].submit();
+                                                    swal("Le rôle a bien étais modifié", {icon: "success"});
+                                                    } else {
+                                                    swal("Chnagement de rôle annulez");
+                                                    }
+                                                });
+
+                                            }
+										</script>
+
+									</tr>
+								{% endif %}
+							{% endfor %}
+						</tbody>
+					</table>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% for user in users %}{% endfor %}
 
 
 {% endblock %}

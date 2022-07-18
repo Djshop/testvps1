@@ -993,7 +993,7 @@ footer .legal {
 #smallObligatory {
     align-self: flex-start;
     margin-top: 10px;
-    margin-left: 100px;
+    margin-left: 8%;
 }
 
 #passwordRequirements{
@@ -7530,6 +7530,10 @@ select option:hover {
     .registerCard .formInputRegister .formRegister .rightFormRegister input {
         margin-bottom: 20px !important;
     }
+    #smallObligatory {
+
+        margin-left: 20%;
+    }
 
     /* ------------------- Fin Register  ------------------- */
 
@@ -9223,6 +9227,9 @@ select option:hover {
     }
     #smallObligatory{
         font-size: 30px;
+    }
+    #smallObligatory {
+        margin-left: 10%;
     }
 
     /* ------------------- Fin Register------------------- */

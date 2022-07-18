@@ -5812,65 +5812,16 @@ input {
 
 
 /* Reset Request  --------------------------------------------------------------------------------------------------------------------*/
-/* .resetForm {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.resetForm form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 91%;
-    text-align: center;
-    margin: 30px;
-}
-
-.resetForm form div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.resetForm form input {
-    width: 300px;
-    margin-bottom: 30px;
-    margin-top: 5px;
-    padding: 3px;
-} */
-
-/* .btnResetRequest {
-    padding: 10px 20px 10px 20px;
-    background-color: rgba(0, 0, 0, 0.598);
-    border: 1px solid green;
-    border-radius: 5px;
-    color: green;
-    font-weight: bold;
-}
-
-.btnResetRequest:hover {
-    padding: 10px 20px 10px 20px;
-    background-color: green;
-    border: 1px solid rgba(0, 0, 0, 0.598);
-    color: black;
-}
-
-#h3EmailReset {
-    border-bottom: 1px solid green;
-    border-radius: 50%;
-    padding-bottom: 20px;
-    width: 70%;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: -35px;
-} */
 
 .containerLogin .loginBody .formLogin .headLoginRequest small {
     font-size: 15px;
+    width: 70%;
+}
+
+
+.btnReset {
+    margin-top: 30px;
 }
 
 /* END Reset Request  --------------------------------------------------------------------------------------------------------------------*/

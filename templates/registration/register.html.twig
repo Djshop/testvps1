@@ -4,10 +4,10 @@
 {% endblock %}
 
 {% block body %}
-{% block javascripts %}
-<script src="{{ asset('js/register.js')}}"></script>
+	{% block javascripts %}
+		<script src="{{ asset('js/register.js')}}"></script>
 
-{% endblock %}
+	{% endblock %}
 
 
 	<div class="container registerCard">
@@ -15,9 +15,9 @@
 		<form method="POST" class="formInputRegister">
 			<div class="headLogin">
 				<p>Bienvenue sur Dj Shop</p>
-			
+
 			</div>
-		
+
 
 			<div class="errors">
 				{% for flashError in app.flashes('verify_email_error') %}
@@ -48,18 +48,23 @@
 					<p class="text-left mt-4 mb-1">{{ form_label(registrationForm.email, 'Adresse email *') }}</p>
 					{{ form_widget(registrationForm.email) }}
 
-						<div class="text-left mt-4 mb-1 keyFlex " id="passwordRequirements">
-							<small>Votre mot de passe doit contenir au moins 
+					<div class="text-left mt-4 mb-1 keyFlex " id="passwordRequirements">
+						<small>Votre mot de passe doit contenir au moins
 							<ul>
-							<li>8 caractères minimum</li>
-							<li>1 caractère majuscule</li>
-							<li>1 chiffre</li>
+								<li>8 caractères minimum</li>
+								<li>1 caractère majuscule</li>
+								<li>1 chiffre</li>
 							</ul>
-							</small>
-						</div>
+						</small>
+					</div>
 
 					<p class=" mt-4 mb-1" id="passwordFormOne">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
 					{{ form_widget(registrationForm.plainPassword) }}
+					<script>
+						document.getElementById("passwordFormOne").addEventListener('click', function () {
+						document.getElementById("passwordRequirements").style.display = "flex"
+						});
+					</script>
 
 					<p class="text-left mt-4 mb-1 keyFlex">
 						<label for="confirm_password">Confirmation du mot de passe *</label>
@@ -92,7 +97,8 @@
 
 				</div>
 			</div>
-			<small id="smallObligatory">* champs obligatoires </small>
+			<small id="smallObligatory">* champs obligatoires
+			</small>
 
 
 			<div class="btnRegister">

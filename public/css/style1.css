@@ -9893,8 +9893,8 @@ select option:hover {
     }
     
     .btnAddCart {
-    font-size: 40px;
-    border-radius: 10px;
+    font-size: 40px!important;
+    border-radius: 10px!important;
     }
 
 

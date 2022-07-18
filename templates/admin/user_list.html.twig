@@ -135,7 +135,7 @@
                                         	<button onclick="sweetAlertRoleUser{{ user.id }}({{ user.id }})"   class="btnDownUser">
 												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
                                         <script>
-											function sweetAlertRoleUser {{ user.id }}(id) {
+											function sweetAlertRoleUser{{ user.id }}(id) {
                                                 swal({
                                                     title: "Êtes-vous sûr ?",
                                                     text: "Cet utilisateur va perdre ses droit admins et n'aura accées qu'au fonctionnalité client",

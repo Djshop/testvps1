@@ -4,10 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	{% block javascripts %}
-		<script src="{{ asset('js/register.js')}}"></script>
 
-	{% endblock %}
 
 
 	<div class="container registerCard">
@@ -60,16 +57,20 @@
 
 					<p class=" mt-4 mb-1" id="passwordFormOne">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
 					{{ form_widget(registrationForm.plainPassword) }}
-					<script>
-						document.getElementById("registration_form_plainPassword").addEventListener('click', function () {
-						document.getElementById("passwordRequirements").style.display = "flex"
-						});
-					</script>
+				
 
 					<p class="text-left mt-4 mb-1 keyFlex">
 						<label for="confirm_password">Confirmation du mot de passe *</label>
 						<input type="password" id="confirm_password" name="confirm_password">
 					</p>
+						<script>
+						document.getElementById("registration_form_plainPassword").addEventListener('click', function () {
+						document.getElementById("passwordRequirements").style.display = "flex"
+						});
+						document.getElementById("confirm_password").addEventListener('click', function () {
+						document.getElementById("passwordRequirements").style.display = "flex"
+						});
+					</script>
 
 
 				</div>

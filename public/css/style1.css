@@ -998,6 +998,7 @@ footer .legal {
 
 #passwordRequirements{
     display: none;
+    margin-bottom: -25px;
 }
 #passwordRequirements small{
     margin-bottom: -10px;

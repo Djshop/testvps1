@@ -130,12 +130,12 @@
                         {% if countAdmins > 1 %}
                         <form method="POST">
                             <input type="hidden" name="changeToUser" value="{{ user.id }}">
-                            <button type="submit" class="btnDownUser"><i class="fa-solid fa-person-arrow-down-to-line"></i>Client</button>
+                            <button type="submit" class="btnDownUser"><i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
                         </form>
                         {% else %}
         
                         <button class="btnCantAdmin" data-bs-toggle="tooltip" data-bs-placement="top" title="Etant le dernier Admin veuillez passer un autre compte client en Admin avant de pouvoir changez le role de celui-ci">
-                            <i class="fa-solid fa-person-arrow-down-to-line"></i> Client
+                            <i class="fa-solid fa-person-arrow-down-to-line"></i> Changez de role
                           </button>
                         {% endif %}
                     </td>
@@ -184,6 +184,7 @@
                             let formId ="form";
                             formId += id;
                             console.log(formId)
+                            document.forms[formId].submit();
                         
                         }
                         </script>

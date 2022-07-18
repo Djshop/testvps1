@@ -209,13 +209,13 @@
 								<td>Admin</td>
 								<td>
 									{% if countAdmins > 1 %}
-										<form method="POST" id="form{{ user.id }}">
+										<form method="POST" id="formAdmin{{ user.id }}">
 											<input type="hidden" name="changeToUser" value="{{ user.id }}">
 										</form>
-                                        	<button onclick="sweetAlertRoleUser{{ user.id }}({{ user.id }})"  class="btnDownUser">
+                                        	<button onclick="sweetAlertRoleUserAdmin{{ user.id }}({{ user.id }})"  class="btnDownUser">
 												<i class="fa-solid fa-person-arrow-down-to-line"></i>Changez de role</button>
 										<script>
-											function sweetAlertRoleUser {{ xbox.id }}(id) {
+											function sweetAlertRoleUserAdmin{{ xbox.id }}(id) {
                                                 swal({
                                                     title: "Êtes-vous sûr ?",
                                                     text: "Cet utilisateur va perdre ses droit admins et n'aura accées qu'au fonctionnalité client",
@@ -224,7 +224,7 @@
                                                     dangerMode: true
                                                     }).then((willDelete) => {
                                                     if (willDelete) {
-                                                    let formId = "form";
+                                                    let formId = "formAdmin";
                                                     formId += id;
                                                     console.log(formId);
                                                     document.forms[formId].submit();
@@ -292,15 +292,15 @@
 										<td>{{user.adress}}</td>
 										<td>Client</td>
 										<td>
-											<form method="POST" id="form{{ user.id }}" class="formSubmitRole">
+											<form method="POST" id="formUser{{ user.id }}" class="formSubmitRole">
 												<input type="hidden" name="changeToAdmin" value="{{ user.id }}">
 											</form>
-											<button class="btnUpAdmin" onclick="sweetAlertRoleAdmin{{ user.id }}({{ user.id }})">
+											<button class="btnUpAdmin" onclick="sweetAlertRoleAdminUser{{ user.id }}({{ user.id }})">
 												<i class="fa-solid fa-person-arrow-up-from-line"></i>
 												Changez de role</button>
 										</td>
 										<script>
-											function sweetAlertRoleAdmin {{ xbox.id }}(id) {
+											function sweetAlertRoleAdminUser{{ xbox.id }}(id) {
 
 
                                                 swal({
@@ -311,7 +311,7 @@
                                                     dangerMode: true
                                                     }).then((willDelete) => {
                                                     if (willDelete) {
-                                                    let formId = "form";
+                                                    let formId = "formUser";
                                                     formId += id;
                                                     console.log(formId);
                                                     document.forms[formId].submit();

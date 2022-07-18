@@ -877,96 +877,7 @@ footer .legal {
 /*  End Login -------------------------------------------------------------------------------------------------------------------- */
 
 /*  Registration --------------------------------------------------------------------------------------------------------------------*/
-/* .formInputRegister {
-    border: 2px solid rgb(3, 107, 17);
-    border-radius: 400px;
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 55%;
-    background: #292929;
-    z-index: 3;
-    color: white;
 
-    box-shadow: rgba(3, 107, 17, 0.24) 0px 54px 55px, rgba(3, 107, 17, 0.24) 0px -12px 30px, rgba(3, 107, 17, 0.24) 0px 4px 6px, rgba(3, 107, 17, 0.24) 0px 12px 13px, rgba(3, 107, 17, 0.24) 0px -3px 5px;
-}
-
-.formInputRegister label {
-    font-size: 20px;
-}
-
-.formInputRegister input {
-    border-radius: 30px;
-    background: #333333;
-    border: 1px solid rgba(3, 107, 17, 0.24);
-    color: rgb(250, 249, 249);
-    border-color: rgba(3, 107, 17, 0.24) !important;
-    width: 40%;
-}
-
-.formInputRegister input:focus {
-    background: rgba(3, 107, 17, 0.24);
-    border: 1px solid rgba(3, 107, 17, 0.24);
-    outline-offset: 0px;
-    outline: none;
-}
-
-.formInputRegister input:hover {
-    border-radius: 30px;
-    background: rgba(3, 107, 17, 0.24);
-    border: 1px solid rgba(3, 107, 17, 0.527);
-    border-color: rgba(3, 107, 17, 0.527);
-}
-
-.formRegister {
-
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-}
-
-.leftFormRegister {
-
-    width: 40%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* margin: 0 auto; */
-/* padding: 0; 
-    justify-content: flex-start;
-    height: 100%;
-}
-
-.rightFormRegister {
-
-    width: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.buttonsRegister {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-direction: row;
-}
-
-.showErrorsRegister {
-    top: 6%;
-    z-index: 3 !important;
-} */
 
 
 .registerCard {
@@ -1074,6 +985,16 @@ footer .legal {
     color: transparent;
 }
 
+.registerCard .formInputRegister .headLogin ul {
+    text-align: left;
+}
+
+
+#smallObligatory {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 100px;
+}
 /*  End  Registration --------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -9242,7 +9163,7 @@ select option:hover {
     }
 
     .registerCard .formInputRegister .headLogin small {
-        font-size: 55px;
+        font-size: 40px;
     }
 
     .registerCard form label {
@@ -9286,6 +9207,9 @@ select option:hover {
     }
 
     .registerCard .formInputRegister .errors {
+        font-size: 30px;
+    }
+    #smallObligatory{
         font-size: 30px;
     }
 

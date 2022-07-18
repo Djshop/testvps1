@@ -37,24 +37,24 @@
 				<div class="leftFormRegister">
 
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="firstname">Prénom*</label>
+						<label for="firstname">Prénom *</label>
 						<input type="text" id="firstname" name="firstname">
 					</p>
 
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="lastname">Nom*</label>
+						<label for="lastname">Nom *</label>
 						<input type="text" id="lastname" name="lastname">
 					</p>
 
-					<p class="text-left mt-4 mb-1">{{ form_label(registrationForm.email, 'Adresse email*') }}</p>
+					<p class="text-left mt-4 mb-1">{{ form_label(registrationForm.email, 'Adresse email *') }}</p>
 					{{ form_widget(registrationForm.email) }}
 
 
-					<p class=" mt-4 mb-1">{{ form_label(registrationForm.plainPassword, 'Mot de passe*') }}</p>
+					<p class=" mt-4 mb-1">{{ form_label(registrationForm.plainPassword, 'Mot de passe *') }}</p>
 					{{ form_widget(registrationForm.plainPassword) }}
 
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="confirm_password">Confirmation du mot de passe*</label>
+						<label for="confirm_password">Confirmation du mot de passe *</label>
 						<input type="password" id="confirm_password" name="confirm_password">
 					</p>
 
@@ -62,29 +62,29 @@
 				</div>
 				<div class="rightFormRegister">
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="phone">Numéro de téléphone*</label>
+						<label for="phone">Numéro de téléphone *</label>
 						<input type="phone" id="phone" name="phone">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="adress_one">Adresse ligne 1*</label>
+						<label for="adress_one">Adresse ligne 1 *</label>
 						<input type="text" id="adress_one" name="adress_one">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="adress_two">Adresse ligne 2*</label>
+						<label for="adress_two">Adresse ligne 2</label>
 						<input type="text" id="adress_two" name="adress_two">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="postal">Code postal*</label>
+						<label for="postal">Code postal *</label>
 						<input type="text" id="postal" name="postal">
 					</p>
 					<p class="text-left mt-4 mb-1 keyFlex">
-						<label for="city">Ville*</label>
+						<label for="city">Ville *</label>
 						<input type="text" id="city" name="city">
 					</p>
 
 				</div>
 			</div>
-			<small>* champs obligatoires </small>
+			<small id="smallObligatory">* champs obligatoires </small>
 
 
 			<div class="btnRegister">

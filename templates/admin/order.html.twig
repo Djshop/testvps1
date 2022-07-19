@@ -322,8 +322,7 @@
                                 </script>
                                 <form method="POST" class="formAdd">
                                     <input type="hidden" name="refundForm" value="submited">
-                                    <label for="refund">Entrer le N° de transaction Paypal</label>
-                                    <input type="text" id="refund" name="refund">
+                                    <input type="text" id="refund" name="refund" placeholder="Entrer le N° de transaction Paypal">
                                     <input type="hidden" name="orderId" value="{{ order.id }}">
                                     <button type="submit">Valider</button>
                                 </form>

@@ -3202,11 +3202,18 @@ input {
 
 .bottom-card .addToCart .price .genP {
  font-style: italic;
+ margin: 0;
+ padding: 0;
+ font-size: 14px;
 }
 .bottom-card .addToCart .price .priceP {
     margin: 0;
     padding: 0;
     font-size: 14px;
+    font-size: 14px;
+    color: #f66b0e;
+    font-weight: bold;
+
 }
 
 .bottom-card .addToCart .logo {

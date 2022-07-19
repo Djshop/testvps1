@@ -1,3 +1,4 @@
+//Page Liste commandes Admin
 function goodTransaction() {
    
     document.getElementById("refundTransaction").style.animationName = "opacityDown" ;
@@ -15,6 +16,8 @@ function goodTransaction() {
     document.getElementById("refundTransactionBtn").style.color = "#efefef" ;
     document.getElementById("cancelTransactionBtn").style.color = "#efefef" ;
     document.getElementById("goodTransactionBtn").style.color = "#F66B0E" ;
+
+    document.getElementById("errorsOrders").style.display = "none" ;
  
     
 }
@@ -34,6 +37,8 @@ function refundTransaction() {
     document.getElementById("goodTransactionBtn").style.color = "#efefef" ;
     document.getElementById("cancelTransactionBtn").style.color = "#efefef" ;
     document.getElementById("refundTransactionBtn").style.color = "#F66B0E" ;
+
+    document.getElementById("errorsOrders").style.display = "none" ;
  
     
 }
@@ -55,6 +60,8 @@ function cancelTransaction() {
     document.getElementById("refundTransactionBtn").style.color = "#efefef" ;
     document.getElementById("cancelTransactionBtn").style.color = "#F66B0E" ;
 
+    document.getElementById("errorsOrders").style.display = "none" ;
+
  
     
 }
@@ -75,6 +82,8 @@ function goodTransactionResponsive() {
     document.getElementById("refundTransactionBtnResponsive").style.color = "#efefef" ;
     document.getElementById("cancelTransactionBtnResponsive").style.color = "#efefef" ;
     document.getElementById("goodTransactionBtnResponsive").style.color = "#F66B0E" ;
+
+    document.getElementById("errorsOrders").style.display = "none" ;
  
     
 }
@@ -94,6 +103,8 @@ function refundTransactionResponsive() {
     document.getElementById("goodTransactionBtnResponsive").style.color = "#efefef" ;
     document.getElementById("cancelTransactionBtnResponsive").style.color = "#efefef" ;
     document.getElementById("refundTransactionBtnResponsive").style.color = "#F66B0E" ;
+
+    document.getElementById("errorsOrders").style.display = "none" ;
  
     
 }
@@ -115,9 +126,13 @@ function cancelTransactionResponsive() {
     document.getElementById("refundTransactionBtnResponsive").style.color = "#efefef" ;
     document.getElementById("cancelTransactionBtnResponsive").style.color = "#F66B0E" ;
 
+    document.getElementById("errorsOrders").style.display = "none" ;
+
  
     
 }
+
+//Page Liste commandes User
 
 function userOrders() {
    
@@ -170,4 +185,12 @@ function userRefundsResponsive() {
     document.getElementById("userRefundsBtnResponsive").style.color = "#F66B0E" ;
  
     
+}
+
+//Affichage des erreurs et display none quand on navigue entre les onglets de la page 
+function errorsDisplayOn() {
+    document.getElementById("errorsOrders").style.display = "block" ;
+}
+function errorsDisplayOff() {
+    document.getElementById("errorsOrders").style.display = "none" ;
 }

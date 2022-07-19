@@ -55,7 +55,7 @@
 			
 				{% for level, messages in app.flashes %}
 					{% for message in messages %}
-						<div class="alert text-center col-6 alert-{{ level }}">
+						<div id="errorsOrders" class="alert text-center col-6 alert-{{ level }}">
 							{{ message|raw }}
 						</div>
 					{% endfor %}
@@ -102,8 +102,8 @@
 											                    nom d'id) #}
 
 
-											<button onclick="addSuivi('block','{{order.id}}');" class="suiviBtn suiviBtnSuivi">N° Suivi</button>
-											<button onclick="addRefund('block','refund{{order.id}}');" class="suiviBtn suiviBtnCancel">Annuler</button>
+											<button onclick="addSuivi('block','{{order.id}}');errorsDisplayOff()" class="suiviBtn suiviBtnSuivi">N° Suivi</button>
+											<button onclick="addRefund('block','refund{{order.id}}');errorsDisplayOff()" class="suiviBtn suiviBtnCancel">Annuler</button>
 											<script>
 												var addSuivi = function (value, object) {
                                                         document.getElementById(object).style.display = value;
@@ -130,7 +130,7 @@
 															<div class="btnFormContact btnFormContactSuivi">
 
 																<button type="submit" class="btnAnim">
-																	<div class="btnTextFormContact">
+																	<div class="btnTextFormContact" onclick="errorsDisplayOn()">
 																		Envoyer
 																		<i class="fa-solid fa-paper-plane"></i>
 																	</div>
@@ -158,7 +158,7 @@
 															<div class="btnFormContact btnFormContactSuivi">
 
 																<button type="submit" class="btnAnim">
-																	<div class="btnTextFormContact">
+																	<div class="btnTextFormContact" onclick="errorsDisplayOn()">
 																		Envoyer
 																		<i class="fa-solid fa-paper-plane"></i>
 																	</div>
@@ -316,7 +316,7 @@
 									                    nom d'id) #}
 
 
-									<button class="refundBtn" onclick="addRefund('block','refund{{order.id}}');">Rembourser la commande</button>
+									<button class="refundBtn" onclick="addRefund('block','refund{{order.id}}');errorsDisplayOff()">Rembourser la commande</button>
 									<script>
 										var addRefund = function (value, object) {
                                                 document.getElementById(object).style.display = value;
@@ -340,7 +340,7 @@
 													<input type="hidden" name="orderId" value="{{ order.id }}">
 													<div class="btnFormContact btnFormContactSuivi">
 														<button type="submit" class="btnAnim">
-															<div class="btnTextFormContact">
+															<div class="btnTextFormContact" onclick="errorsDisplayOn()">
 																Envoyer
 																<i class="fa-solid fa-paper-plane"></i>
 															</div>

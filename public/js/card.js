@@ -4,9 +4,10 @@ function addToCartAnim(object ,value) {
     const addToCart = 'addToCart' + object + value;
     document.getElementById(addToCart).style.marginLeft = '-100%';
     document.getElementById(addToCart).style.animationName = 'cart-slide-left';
+    setTimeout(function () {
     const addFromCartForm = 'addFromCartFormAll' + value;
     document.getElementById(addFromCartForm).submit();
-   
+    }, 1000);
 
 
 }
@@ -15,8 +16,10 @@ function deleteFromCartAnim(object, value) {
     const addToCart = 'addToCart' + object + value;
     document.getElementById(addToCart).style.marginLeft = '0';
     document.getElementById(addToCart).style.animationName = 'cart-slide-right';
+    setTimeout(function () {
     const deleteFromCartForm = 'deleteFromCartFormAll' + value;
     document.getElementById(deleteFromCartForm).submit();
+    }, 1000);
   
 
 

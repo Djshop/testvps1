@@ -7,7 +7,7 @@ function addToCartAnim(object ,value) {
     setTimeout(function () {
     const addFromCartForm = 'addFromCartFormAll' + value;
     document.getElementById(addFromCartForm).submit();
-    }, 1000);
+    }, 500);
 
 
 }
@@ -19,7 +19,7 @@ function deleteFromCartAnim(object, value) {
     setTimeout(function () {
     const deleteFromCartForm = 'deleteFromCartFormAll' + value;
     document.getElementById(deleteFromCartForm).submit();
-    }, 1000);
+    }, 500);
   
 
 

@@ -1668,6 +1668,31 @@ color: #f66B0E;
     outline: none;
 
 }
+#refund {
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-bottom: 3px solid #205375;
+    background-color: transparent;
+    margin-bottom: 50px;
+    font-size: 35px;
+    color: #efefef;
+    padding: 5px;
+    margin-top: 15%;
+
+
+}
+
+#refund::placeholder {
+    color: #2b86c3;
+    opacity: 1;
+    font-size: 20px;
+}
+
+#refund:focus {
+    outline: none;
+
+}
 
 #cancelRefund {
     width: 100%;
@@ -9612,6 +9637,19 @@ select option:hover {
     }
 
     #suivi::placeholder {
+
+        font-size: 70px;
+
+    }
+
+    #refund {
+
+        font-size: 70px;
+        margin-top: 40%;
+
+    }
+
+    #refund::placeholder {
 
         font-size: 70px;
 

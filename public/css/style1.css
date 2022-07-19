@@ -3200,6 +3200,9 @@ input {
     color: #f66b0e;
 }
 
+.bottom-card .addToCart .price .genP {
+ font-style: italic;
+}
 .bottom-card .addToCart .price .priceP {
     margin: 0;
     padding: 0;
@@ -3366,6 +3369,8 @@ input {
     font-weight: bold;
     margin-bottom: 20px;
     cursor: pointer;
+    text-align: center;
+    width: 100%;
 }
 
 .cardXboxNew .top-card .info .textInfo .titleInfo:hover {

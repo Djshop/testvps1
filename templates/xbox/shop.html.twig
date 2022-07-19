@@ -186,7 +186,7 @@
 								<form method="Post" id="slimFilterActiveForm">
 									<input type="hidden" name="genSlim" value="genSlim">
 									<button type="submit" class="btnFilterGen">
-										<i class="fa-brands fa-xbox"></i>Xbox 360 Slim</button>
+										<i class="fa-brands fa-xbox"></i>SLIM</button>
 								</form>
 							</div>
 
@@ -198,7 +198,7 @@
 								<form method="Post" id="fatFilterActiveForm">
 									<input type="hidden" name="genFat" value="genFat">
 									<button type="submit" class="btnFilterGen">
-										<i class="fa-brands fa-xbox"></i>Xbox 360 Fat</button>
+										<i class="fa-brands fa-xbox"></i>FAT</button>
 								</form>
 							</div>
 							<div class="slimFilter" id="slimFilterActive">
@@ -219,14 +219,14 @@
 							<form method="Post" id="fatFilterActiveForm">
 								<input type="hidden" name="genFat" value="genFat">
 								<button class="btnFilterGen">
-									<i class="fa-brands fa-xbox"></i>Xbox 360 Fat</button>
+									<i class="fa-brands fa-xbox"></i>FAT</button>
 							</form>
 						</div>
 						<div class="slimFilter" id="slimFilterInactive">
 							<form method="Post" id="slimFilterActiveForm">
 								<input type="hidden" name="genSlim" value="genSlim">
 								<button class="btnFilterGen">
-									<i class="fa-brands fa-xbox"></i>Xbox 360 Slim</button>
+									<i class="fa-brands fa-xbox"></i>SLIM</button>
 							</form>
 						</div>
 					{% endif %}
@@ -288,6 +288,14 @@
 								<div class="addToCart">
 									<div class="price">
 										<p class="titleP" onclick="openXbox({{ xbox.id }})">{{xbox.title}}</p>
+										<p class="priceP">
+											   {% if xbox.generation == 'xboxFat' %}
+												FAT
+												{% endif %}
+												{% if xbox.generation == 'xboxSlim' %}
+												SLIM
+												{% endif %}
+										</p>
 										<p class="priceP">{{xbox.price}}€</p>
 									</div>
 									<div class="logoSold">
@@ -315,6 +323,14 @@
 											<div class="addToCart" id="addToCartallCart{{xbox.id}}">
 												<div class="price">
 													<p class="titleP" onclick="openXbox({{ xbox.id }})">{{xbox.title}}</p>
+													<p class="priceP">
+														   {% if xbox.generation == 'xboxFat' %}
+															FAT
+															{% endif %}
+															{% if xbox.generation == 'xboxSlim' %}
+															SLIM
+															{% endif %}
+													</p>
 													<p class="priceP">{{xbox.price}}€</p>
 												</div>
 												<div class="logo" onclick="addToCartAnim('allCart','{{xbox.id}}')">
@@ -359,6 +375,14 @@
 											<div class="addToCart" id="addToCartall{{xbox.id}}">
 												<div class="price">
 													<p class="titleP" onclick="openXbox({{ xbox.id }})">{{xbox.title}}</p>
+													<p class="priceP">
+														   {% if xbox.generation == 'xboxFat' %}
+															FAT
+															{% endif %}
+															{% if xbox.generation == 'xboxSlim' %}
+															SLIM
+															{% endif %}
+													</p>
 													<p class="priceP">{{xbox.price}}€</p>
 												</div>
 												<div class="logo" onclick="addToCartAnim('all','{{xbox.id}}')">
@@ -400,6 +424,14 @@
 										<div class="addToCart" id="addToCart{{xbox.id}}">
 											<div class="price">
 												<p class="titleP" onclick="openXbox({{ xbox.id }})">{{xbox.title}}</p>
+												<p class="priceP">
+													   {% if xbox.generation == 'xboxFat' %}
+														FAT
+														{% endif %}
+														{% if xbox.generation == 'xboxSlim' %}
+														SLIM
+														{% endif %}
+												</p>
 												<p class="priceP">{{xbox.price}}€</p>
 											</div>
 											<div class="logo" onclick="sweetAlertVerified()">
@@ -413,6 +445,14 @@
 									<div class="addToCart" id="addToCart{{xbox.id}}">
 										<div class="price">
 											<p class="titleP" onclick="openXbox({{ xbox.id }})">{{xbox.title}}</p>
+											<p class="priceP">
+												   {% if xbox.generation == 'xboxFat' %}
+													FAT
+													{% endif %}
+													{% if xbox.generation == 'xboxSlim' %}
+													SLIM
+													{% endif %}
+											</p>
 											<p class="priceP">{{xbox.price}}€</p>
 										</div>
 										<div class="logo" onclick="sweetAlertConnected()">

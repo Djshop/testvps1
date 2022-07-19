@@ -437,7 +437,7 @@
 	{# Condition pour afficher la page home #}
 		 {# Si on trouve pas la session on affiche la homepage et on cache le contenu de la page #}
 			var sessionVerifyHomepage = sessionStorage.getItem('homepageSession');
-			console.log(sessionVerifyHomepage);
+			console.log(sessionStorage.getItem('homepageSession'));
 			if(!sessionVerifyHomepage){
 				document.getElementById("optionHide").style.display = "none";
 				document.getElementById("containerShopHide").style.display = "none";

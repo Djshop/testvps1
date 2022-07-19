@@ -4032,6 +4032,7 @@ input {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+    padding-bottom: 350px;
 }
 
 .cartCards .totalLabel {

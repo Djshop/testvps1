@@ -52,7 +52,7 @@
 		</div>
 
 		<div class="dashboardContainerList">
-			<div class="errorsListOrder">
+			
 				{% for level, messages in app.flashes %}
 					{% for message in messages %}
 						<div class="alert text-center col-6 alert-{{ level }}">
@@ -60,7 +60,7 @@
 						</div>
 					{% endfor %}
 				{% endfor %}
-			</div>
+			
 			<div class="dashList" id="goodTransaction">
 				{% if countWaiting == 0 %}
 

@@ -3644,6 +3644,9 @@ input {
     color: #205375;
     overflow: hidden;
 }
+.dashList .items:hover {
+    color: #f66b0e;
+}
 
 .dashList .items .td {
     display: flex;
@@ -3653,9 +3656,6 @@ input {
     border-radius: 5px;
     padding: 5px;
     font-weight: 700;
-}
-.dashList .items .td:hover {
-    color: #f66b0e;
 }
 
 .dashList .items .td i {

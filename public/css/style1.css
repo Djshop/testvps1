@@ -1072,6 +1072,7 @@ color: #f66B0E;
 }
 
 #homePageHide {
+    display: none;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
 }

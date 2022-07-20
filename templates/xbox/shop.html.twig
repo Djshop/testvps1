@@ -484,8 +484,9 @@
 				document.getElementById("containerShopHide").style.display = "none";
 				document.getElementById("optionHide").style.display = "none";
 				document.getElementById("up").style.display = "none";
-				document.getElementById("footerId").style = "height : 0px;";
-				document.getElementById("footerId").style = "overflow : hidden;";
+				var footers = document.getElementsByTagName('footer');
+				footers[0].style = 'display: none;';
+			
 
 			}
 

@@ -9897,6 +9897,14 @@ select option:hover {
         margin-right: -10px;
     }
 
+    .leftVerify .h5Access{
+        font-size: 40px;
+    }
+
+    #pageVerify {
+        margin-right: -5px;
+    }
+
     /* Responsive finition */
 
 
